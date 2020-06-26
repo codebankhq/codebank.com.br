@@ -17,6 +17,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -37,7 +38,36 @@
     <!-- End Facebook Pixel Code -->
 </head>
 <body>
-    <div id="termynal" data-termynal data-ty-typeDelay="70" data-ty-lineDelay="900">
+    <header>
+      <div class="container">
+        <img class="logo" src="./static/img/logo.svg" alt="Codebank"/>
+
+        <nav>
+          <ul>
+            <li>
+              <button id="register" type="button">Cadastrar</button>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main>
+      <section id="intro">
+        <div class="container">
+          <h1 class="title">
+            Banco totalmente digital. 💸 😻
+          </h1>
+
+          <h1 class="title non-highlighted">
+            Para desenvolvedores
+          </h1>
+        </div>
+      </section>
+    </main>
+
+    <!-- <div id="termynal" data-termynal data-ty-typeDelay="70" data-ty-lineDelay="900">
         <span data-ty="input" data-ty-prompt="$">cb pay 13691402750500290410887318880015982870000012000</span>
         <span data-ty>Você deseja pagar o boleto da Aeogi, no valor de R$ 120,00?</span>
         <span data-ty="input" data-ty-typeDelay="1000" data-ty-prompt="(s/N)">s</span>
@@ -48,6 +78,6 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/termynal.min.js"></script>
     <script>
       var termynal = new Termynal('#termynal');
-    </script>
+    </script> -->
 </body>
 </html>
