@@ -3,13 +3,11 @@ body {
     --color-text: #aaa;
     --color-text-subtle: #00ff2b;
 
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
     background: #000;
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -103,5 +101,84 @@ body {
 @keyframes blink {
     50% {
         opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../font/Rubik/Rubik-Regular.ttf") format("truetype")
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+}
+
+header .container .logo {
+    padding: 20px;
+    width: 189px;
+    height: 24px;
+}
+
+header nav ul li {
+    list-style: none;
+    padding: 20px;
+    font-style: bold;
+    font-size: 1.4rem;
+}
+
+header nav ul li button {
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 10px 32px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+main #intro .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+}
+
+main #intro .title {
+    font-family: "Rubik";
+    font-style: medium;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+main #intro .title.non-highlighted {
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
     }
 }
