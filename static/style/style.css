@@ -104,11 +104,6 @@ body {
     }
 }
 
-@font-face {
-    font-family: "Rubik";
-    src: url("../font/Rubik/Rubik-Regular.ttf") format("truetype")
-}
-
 html {
     font-size: 62.5%;
 }
