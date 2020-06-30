@@ -104,6 +104,19 @@ body {
     }
 }
 
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../font/JetBrainsMono/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
+.subtitle {
+    font-family: "JetBrains Mono";
+}
+
+.btn {
+    font-family: "JetBrains Mono";
+}
+
 html {
     font-size: 62.5%;
 }
