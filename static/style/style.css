@@ -122,20 +122,22 @@ header .container {
     align-items: center;
     justify-content: space-between;
 
-    width: 90%;
+    width: 80%;
     max-width: 100%;
     margin: auto;
 }
 
+hr {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 header .container .logo {
-    padding: 20px;
     width: 189px;
     height: 24px;
 }
 
 header nav ul li {
     list-style: none;
-    padding: 20px;
     font-style: bold;
     font-size: 1.4rem;
 }
@@ -148,14 +150,20 @@ header nav ul li button {
     padding: 10px 32px;
     font-weight: bold;
     border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+main #intro {
+    margin: 80px 0;
 }
 
 main #intro .container {
     display: flex;
-    flex-wrap: wrap;
-    width: 90%;
     max-width: 100%;
+    width: 80%;
     margin: auto;
+    color: white;
 }
 
 main #intro .title {
@@ -164,12 +172,40 @@ main #intro .title {
     font-size: 3.6rem;
     line-height: 3.6rem;
     color: white;
-    padding: 20px;
+    text-align: left;
+    width: 65%;
+    margin: 80px 0 0 0;
+}
+
+main #intro p {
+    font-size: 1.6rem;
+    line-height: 20px;
     text-align: left;
 }
 
-main #intro .title.non-highlighted {
+main .non-highlighted {
     opacity: 0.6;
+}
+
+h1 {
+    line-height: 36px;
+}
+
+.btn {
+    background-color: #D4D73B;
+    text-align: left;
+    text-decoration: none;
+    border: none;
+    padding: 10px 32px;
+    font-weight: bold;
+    margin: 150px 0 0 0;
+    outline: none;
+    cursor: pointer;
+    height: 56px;
+}
+
+main #intro .btn {
+    width: 280px;
 }
 
 @media (max-width: 768px) {
