@@ -221,6 +221,74 @@ main #intro .btn {
     width: 280px;
 }
 
+.btn-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 490px) {
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+
+    header .container {
+        width: 90%;
+    }
+
+    header .container .logo {
+        width: 45%;
+        height: 24px;
+    }
+
+    main #intro {
+        margin: 0;
+    }
+
+    main #intro .container {
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
+
+    main #intro .title {
+        margin: 0;
+        position: relative;
+        bottom: 37px;
+        width: 70%;
+    }
+
+    main #intro .mockup img {
+        width: 90%;
+    }
+
+    main #intro .subtitle {
+        font-size: 2.6rem;
+    }
+
+    main #intro .container .content {
+        order: 2;
+    }
+
+    main #intro .container .content {
+        order: 1;
+    }
+
+    main #intro .btn {
+      margin: 0;
+      width: 100%;
+    }
+}
+
+@media (max-width: 570px) {
+
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 50%;
