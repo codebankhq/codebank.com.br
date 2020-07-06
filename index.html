@@ -1,114 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Codebank</title>
+  <meta charset="UTF-8">
+  <title>Codebank</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169521310-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169521310-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      gtag('config', 'UA-169521310-2');
-    </script>
-    <!-- End of Global site tag (gtag.js) -->
+    gtag('config', 'UA-169521310-2');
+  </script>
+  <!-- End of Global site tag (gtag.js) -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Facebook Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '823600328047845');
-      fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=823600328047845&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
+    fbq('init', '823600328047845');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=823600328047845&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
-    <header>
+  <header>
+    <div class="container">
+      <img class="logo" src="./static/img/logo.svg" alt="Codebank" />
+
+      <nav>
+        <ul>
+          <li>
+            <button id="register" type="button">Cadastrar</button>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <hr>
+
+  <main>
+    <section id="intro">
       <div class="container">
-        <img class="logo" src="./static/img/logo.svg" alt="Codebank"/>
+        <div class="content">
+          <h1 class="title">
+            Banco totalmente digital. 💸 😻
+            <span class="non-highlighted">Para desenvolvedores</span>
+          </h1>
+          <p class="subtitle non-highlighted">
+            Permitimos que você personalize de
+            acordo com suas necessidades
+          </p>
 
-        <nav>
-          <ul>
-            <li>
-              <button id="register" type="button">Cadastrar</button>
-            </li>
-          </ul>
-        </nav>
-
-      </div>
-    </header>
-
-    <hr>
-
-    <main>
-      <section id="intro">
-       <div class="container">
-          <div class="content">
-            <h1 class="title">
-              Banco totalmente digital. 💸 😻
-              <span class="non-highlighted">Para desenvolvedores</span>
-            </h1>
-            <p class="subtitle non-highlighted">
-              Permitimos que você personalize de
-              acordo com suas necessidades
-            </p>
-
-            <div class="btn-border">
-              <button class="btn">
-                <div class="btn-content">
-                  <span> Cadastrar </span>
-                  <img src="./static/img/arrow.svg"/>
-                </div>
-              </button>
-            </div>
-
-            <div class="registered-people">
-              <span>
-                <img src="./static/img/people.svg"/>
-              </span>
-
-              &nbsp;
-
-              <span class="non-highlighted">
-                566 pessoas cadastradas
-              </span>
-            </div>
+          <div class="btn-border">
+            <button class="btn">
+              <div class="btn-content">
+                <span> Cadastrar </span>
+                <img src="./static/img/arrow.svg" />
+              </div>
+            </button>
           </div>
 
-          <div class="mockup">
-            <img src="static/img/mockup.svg"/>
+          <div class="registered-people">
+            <span>
+              <img src="./static/img/people.svg" />
+            </span>
+
+            &nbsp;
+
+            <span class="non-highlighted">
+              566 pessoas cadastradas
+            </span>
           </div>
         </div>
-      </section>
-    </main>
 
-    <!-- <div id="termynal" data-termynal data-ty-typeDelay="70" data-ty-lineDelay="900">
-        <span data-ty="input" data-ty-prompt="$">cb pay 13691402750500290410887318880015982870000012000</span>
-        <span data-ty>Você deseja pagar o boleto da Aeogi, no valor de R$ 120,00?</span>
-        <span data-ty="input" data-ty-typeDelay="1000" data-ty-prompt="(s/N)">s</span>
-        <span data-ty="progress" data-ty-progressChar="·"></span>
-        <span data-ty>Pagamento efetuado com sucesso!</span>
+        <div class="mockup">
+          <picture>
+            <source media="(min-width: 1000px)" srcset="./static/img/mockup.svg" />
+            <source media="(min-width: 300px)" srcset="./static/img/mockup-mobile.svg" />
+            <img src="./static/img/mockup-mobile.svg">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section id="digital-account">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">
+            Conta digital. 🏦 &nbsp;
+            <span class="non-highlighted">Sem taxa de manutenção e nem tarifas.</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Faça parte da Codebank solicitando agora sua Conta
+          </p>
+        </div>
+
+        <div class="account-image">
+          <img src="./static/img/account.svg" />
+        </div>
+
+        <div>
+          <p class="subtitle">
+            Somos livres de astericos & tarifas escondidas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="card">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">
+            Novo <span class="marked">CodeCard</span>. 💳 &nbsp;<span class="non-highlighted">Use débito ou crédito, você é
+            quem sabe</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Faça parte da Codebank solicitando agora sua Conta
+          </p>
+        </div>
+
+        <div class="card-image">
+          <img src="./static/img/card.svg" />
+        </div>
+
+        <div class="contactless">
+          <img src="./static/img/contactless.svg" />
+          <p class="subtitle">
+            Adicione seu cartão na Wallet. Apenas toque e pague rápido com o contactless
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="code-line">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">
+            Faça pagamentos com <span class="marked">uma linha de código</span>. ✨ &nbsp;
+            <span class="non-highlighted">Simples.</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Faça parte da Codebank solicitando agora sua Conta
+          </p>
+        </div>
+
+        <div id="termynal" data-termynal data-ty-typeDelay="70" data-ty-lineDelay="900">
+          <span data-ty="input" data-ty-prompt="$">cb pay 13691402750500290410887318880015982870000012000</span>
+          <span data-ty>Você deseja pagar o boleto da Aeogi, no valor de R$ 120,00?</span>
+          <span data-ty="input" data-ty-typeDelay="1000" data-ty-prompt="(s/N)">s</span>
+          <span data-ty="progress" data-ty-progressChar="·"></span>
+          <span data-ty>Pagamento efetuado com sucesso!</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="api">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">
+            API de <span class="marked">Ted</span> e <span class="marked">Boleto</span>. 💸 📑 &nbsp;
+            <span class="non-highlighted"> Pague e faça emissão e recebimento de TED's.</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Faça parte da Codebank solicitando agora sua Conta
+          </p>
+        </div>
+
+        <div class="code-image">
+          <img src="./static/img/code.svg"/>
+        </div>
+
+        <div class="transactions">
+          <div class="content">
+            <span class="trace"></span>
+            <div class="ted">
+              <h1 class="title">
+                <span class="marked">Ted</span>
+              </h1>
+            </div>
+          </div>
+
+          <h1 class="title bank-slip">
+            Boleto
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="register-form">
+      <div class="container">
+          <div class="content">
+            <h1 class="title">🚀✨</h1>
+            <h1 class="title">
+               Cadastre-se e seja <span class="marked">um dos primeiros</span> a ter acesso!
+            </h1>
+          </div>
+
+          <div class="form-content">
+            <form>
+              <div class="form-group">
+                <label for="name" class="subtitle">Seu nome</label>
+                <div class="input-border">
+                  <input id="name" type="text" placeholder="Informe" name="name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="subtitle">E-mail</label>
+                <div class="input-border">
+                  <input id="email" type="email" placeholder="exemplo@codebank.com" name="email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cellphone" class="subtitle">Celular</label>
+                <div class="input-border">
+                  <input id="cellphone" type="tel" placeholder="(__) _____ - ____" name="cellphone">
+                </div>
+              </div>
+
+              <div class="btn-border">
+                <button class="btn">
+                  <div class="btn-content">
+                    <span> Cadastrar interesse </span>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <div class="container">
+      <img src="./static/img/logo.svg"/>
+
+      <a href="https://www.instagram.com/codebankhq/" class="subtitle link">Instagram</a>
+      <a href="https://twitter.com/CodebankHQ" class="subtitle link">Twitter</a>
+      <span class="subtitle">© 2020</span>
     </div>
+  </footer>
 
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/termynal.min.js"></script>
-    <script>
-      var termynal = new Termynal('#termynal');
-    </script> -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/termynal.min.js"></script>
+  <script>
+    var termynal = new Termynal('#termynal');
+  </script>
 </body>
+
 </html>
