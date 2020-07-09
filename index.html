@@ -109,7 +109,7 @@
       <div class="container">
         <div class="content">
           <h1 class="title">
-            Conta digital. 🏦 &nbsp;
+            Conta digital. 🏦 
             <span class="non-highlighted">Sem taxa de manutenção e nem tarifas.</span>
           </h1>
 
@@ -122,7 +122,7 @@
           <img src="./static/img/account.svg" />
         </div>
 
-        <div>
+        <div class="benefits">
           <p class="subtitle">
             Somos livres de astericos & tarifas escondidas.
           </p>
@@ -134,7 +134,7 @@
       <div class="container">
         <div class="content">
           <h1 class="title">
-            Novo <span class="marked">CodeCard</span>. 💳 &nbsp;<span class="non-highlighted">Use débito ou crédito, você é
+            Novo <span class="marked">CodeCard</span>. 💳 <span class="non-highlighted">Use débito ou crédito, você é
             quem sabe</span>
           </h1>
 
@@ -160,7 +160,7 @@
       <div class="container">
         <div class="content">
           <h1 class="title">
-            Faça pagamentos com <span class="marked">uma linha de código</span>. ✨ &nbsp;
+            Faça pagamentos com <span class="marked">uma linha de código</span>. ✨
             <span class="non-highlighted">Simples.</span>
           </h1>
 
@@ -184,7 +184,7 @@
       <div class="container">
         <div class="content">
           <h1 class="title">
-            API de <span class="marked">Ted</span> e <span class="marked">Boleto</span>. 💸 📑 &nbsp;
+            API de <span class="marked">Ted</span> e <span class="marked">Boleto</span>. 💸 📑
             <span class="non-highlighted"> Pague e faça emissão e recebimento de TED's.</span>
           </h1>
 
@@ -221,6 +221,10 @@
             <h1 class="title">
                Cadastre-se e seja <span class="marked">um dos primeiros</span> a ter acesso!
             </h1>
+
+            <p class="subtitle non-highlighted">
+              Faça parte da Codebank solicitando a Conta Digital e nosso Cartão de Crédito.
+            </p>
           </div>
 
           <div class="form-content">
@@ -259,13 +263,17 @@
     </section>
   </main>
 
+  <hr>
+
   <footer>
-    <hr>
     <div class="container">
       <img src="./static/img/logo.svg"/>
 
-      <a href="https://www.instagram.com/codebankhq/" class="subtitle link">Instagram</a>
-      <a href="https://twitter.com/CodebankHQ" class="subtitle link">Twitter</a>
+      <div class="link-container">
+        <a href="https://www.instagram.com/codebankhq/" class="subtitle">Instagram</a>
+        <a href="https://twitter.com/CodebankHQ" class="subtitle">Twitter </a>
+      </div>
+
       <span class="subtitle">© 2020</span>
     </div>
   </footer>
@@ -273,6 +281,67 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/termynal.min.js"></script>
   <script>
     var termynal = new Termynal('#termynal');
+
+    function addToContent() {
+      const benefits = document.querySelector('#digital-account .benefits');
+      const contactless = document.querySelector('#card .contactless');
+      const transactions = document.querySelector('#api .transactions');
+
+      if(benefits && contactless && transactions){
+        document.querySelector('#digital-account .content').appendChild(benefits);
+        document.querySelector('#card .content').appendChild(contactless);
+        document.querySelector('#api .content').appendChild(transactions);
+      }
+    }
+
+    function removeFromContent() {
+      const benefits = document.querySelector('#digital-account .content .benefits');
+      const contactless = document.querySelector('#card .content .contactless');
+      const transactions = document.querySelector('#api .content .transactions');
+
+      if(benefits && contactless && transactions) {
+        document.querySelector("#digital-account .container").appendChild(benefits);
+        document.querySelector('#card .container').appendChild(contactless);
+        document.querySelector('#api .container').appendChild(transactions);
+      }
+    }
+
+    function addTagToContainer() {
+      const links = document.querySelectorAll('footer .container .link-container a');
+      const container = document.querySelector('footer .container');
+
+      if(links && container){
+        links[0].classList.add('link');
+        links[1].classList.add('link');
+        container.appendChild(links[0]);
+        container.appendChild(links[1]);
+      }
+    }
+
+    function addTagToLinkContainer() {
+      const links = document.querySelectorAll('footer .container a');
+      const linkContainer = document.querySelector('footer .container .link-container');
+
+      if(links && linkContainer){
+        links[0].classList.remove('link');
+        links[1].classList.remove('link');
+        linkContainer.appendChild(links[1]);
+        linkContainer.appendChild(links[0]);
+      }
+    }
+
+    function onResize() {
+      if(window.innerWidth > 980){
+        addToContent();
+        addTagToLinkContainer();
+      } else {
+        removeFromContent();
+        addTagToContainer();
+      }
+    }
+
+    onResize();
+    window.onresize = onResize;
   </script>
 </body>
 
