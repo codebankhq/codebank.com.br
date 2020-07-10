@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -42,7 +42,7 @@
   <!-- End Facebook Pixel Code -->
 </head>
 
-<body>
+<body class="h-full">
   <header>
     <div class="container">
       <img class="logo" src="./static/img/logo.svg" alt="Codebank" />
@@ -61,20 +61,20 @@
   <hr>
 
   <main>
-    <section id="intro">
+    <section class="h-full" id="intro">
       <div class="container">
-        <div class="content">
+        <div class="content mobile-order-2 mobile-relative">
           <h1 class="title">
             Banco totalmente digital. 💸 😻
             <span class="non-highlighted">Para desenvolvedores</span>
           </h1>
-          <p class="subtitle non-highlighted">
+          <p class="subtitle non-highlighted w-50">
             Permitimos que você personalize de
             acordo com suas necessidades
           </p>
 
-          <div class="btn-border">
-            <button class="btn">
+          <div class="border btn-border">
+            <button class="btn mobile-w-100">
               <div class="btn-content">
                 <span> Cadastrar </span>
                 <img src="./static/img/arrow.svg" />
@@ -82,7 +82,7 @@
             </button>
           </div>
 
-          <div class="registered-people">
+          <div class="registered-people mobile-w-100">
             <span>
               <img src="./static/img/people.svg" />
             </span>
@@ -95,7 +95,7 @@
           </div>
         </div>
 
-        <div class="mockup">
+        <div class="mockup mobile-order-1">
           <picture>
             <source media="(min-width: 1000px)" srcset="./static/img/mockup.svg" />
             <source media="(min-width: 300px)" srcset="./static/img/mockup-mobile.svg" />
@@ -105,71 +105,71 @@
       </div>
     </section>
 
-    <section id="digital-account">
+    <section class="h-full" id="digital-account">
       <div class="container">
-        <div class="content">
+        <div class="content w-45 mobile-w-100 relative order-2">
           <h1 class="title">
             Conta digital. 🏦 
             <span class="non-highlighted">Sem taxa de manutenção e nem tarifas.</span>
           </h1>
 
-          <p class="subtitle non-highlighted">
+          <p class="subtitle non-highlighted w-75 mobile-w-100">
             Faça parte da Codebank solicitando agora sua Conta
           </p>
         </div>
 
-        <div class="account-image">
-          <img src="./static/img/account.svg" />
+        <div class="w-35 account-image order-1 mobile-w-100">
+          <img class="w-100" src="./static/img/account.svg" />
         </div>
 
-        <div class="benefits">
-          <p class="subtitle">
+        <div class="benefits position-bottom mobile-relative">
+          <p class="subtitle w-75 mobile-w-100">
             Somos livres de astericos & tarifas escondidas.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="card">
+    <section class="h-full" id="card">
       <div class="container">
-        <div class="content">
+        <div class="content w-45 relative mobile-w-100">
           <h1 class="title">
             Novo <span class="marked">CodeCard</span>. 💳 <span class="non-highlighted">Use débito ou crédito, você é
             quem sabe</span>
           </h1>
 
-          <p class="subtitle non-highlighted">
+          <p class="subtitle non-highlighted w-75 mobile-w-100">
             Faça parte da Codebank solicitando agora sua Conta
           </p>
         </div>
 
-        <div class="card-image">
-          <img src="./static/img/card.svg" />
+        <div class="w-35 card-image mobile-w-100">
+          <img class="w-100" src="./static/img/card.svg" />
         </div>
 
-        <div class="contactless">
+        <div class="contactless position-bottom mobile-relative">
           <img src="./static/img/contactless.svg" />
-          <p class="subtitle">
+          <p class="subtitle w-75 mobile-w-100">
             Adicione seu cartão na Wallet. Apenas toque e pague rápido com o contactless
           </p>
         </div>
       </div>
     </section>
 
-    <section id="code-line">
+    <section class="h-full" id="code-line">
       <div class="container">
-        <div class="content">
+        <div class="content w-45 relative order-2 mobile-w-100">
           <h1 class="title">
             Faça pagamentos com <span class="marked">uma linha de código</span>. ✨
             <span class="non-highlighted">Simples.</span>
           </h1>
 
-          <p class="subtitle non-highlighted">
+          <p class="subtitle non-highlighted w-75 mobile-w-100">
             Faça parte da Codebank solicitando agora sua Conta
           </p>
         </div>
 
-        <div id="termynal" data-termynal data-ty-typeDelay="70" data-ty-lineDelay="900">
+        <div class="w-45 relative order-1 mobile-w-100" id="termynal" data-termynal data-ty-typeDelay="70" data-ty-lineDelay="900">
           <span data-ty="input" data-ty-prompt="$">cb pay 13691402750500290410887318880015982870000012000</span>
           <span data-ty>Você deseja pagar o boleto da Aeogi, no valor de R$ 120,00?</span>
           <span data-ty="input" data-ty-typeDelay="1000" data-ty-prompt="(s/N)">s</span>
@@ -180,9 +180,9 @@
       </div>
     </section>
 
-    <section id="api">
+    <section class="h-full" id="api">
       <div class="container">
-        <div class="content">
+        <div class="w-50 relative content mobile-w-100">
           <h1 class="title">
             API de <span class="marked">Ted</span> e <span class="marked">Boleto</span>. 💸 📑
             <span class="non-highlighted"> Pague e faça emissão e recebimento de TED's.</span>
@@ -193,12 +193,12 @@
           </p>
         </div>
 
-        <div class="code-image">
-          <img src="./static/img/code.svg"/>
+        <div class="w-50 code-image mobile-w-100">
+          <img class="w-100" src="./static/img/code.svg"/>
         </div>
 
-        <div class="transactions">
-          <div class="content">
+        <div class="transactions position-bottom mobile-relative">
+          <div class="w-100 relative content">
             <span class="trace"></span>
             <div class="ted">
               <h1 class="title">
@@ -216,41 +216,41 @@
 
     <section id="register-form">
       <div class="container">
-          <div class="content">
+          <div class="w-50 relative content mobile-w-100">
             <h1 class="title">🚀✨</h1>
             <h1 class="title">
                Cadastre-se e seja <span class="marked">um dos primeiros</span> a ter acesso!
             </h1>
 
-            <p class="subtitle non-highlighted">
+            <p class="w-50 subtitle non-highlighted">
               Faça parte da Codebank solicitando a Conta Digital e nosso Cartão de Crédito.
             </p>
           </div>
 
-          <div class="form-content">
-            <form>
-              <div class="form-group">
+          <div class="form-content w-45 relative mobile-w-100">
+            <form class="mobile-w-100">
+              <div class="form-group mobile-w-100">
                 <label for="name" class="subtitle">Seu nome</label>
-                <div class="input-border">
-                  <input id="name" type="text" placeholder="Informe" name="name">
+                <div class="border input-border mobile-w-100">
+                  <input class="w-100 relative" id="name" type="text" placeholder="Informe" name="name">
                 </div>
               </div>
 
-              <div class="form-group">
+              <div class="form-group mobile-w-100">
                 <label for="email" class="subtitle">E-mail</label>
-                <div class="input-border">
-                  <input id="email" type="email" placeholder="exemplo@codebank.com" name="email">
+                <div class="border input-border mobile-w-100">
+                  <input class="w-100 relative" id="email" type="email" placeholder="exemplo@codebank.com" name="email">
                 </div>
               </div>
 
-              <div class="form-group">
+              <div class="form-group mobile-w-100">
                 <label for="cellphone" class="subtitle">Celular</label>
-                <div class="input-border">
-                  <input id="cellphone" type="tel" placeholder="(__) _____ - ____" name="cellphone">
+                <div class="border input-border mobile-w-100">
+                  <input class="w-100 relative" id="cellphone" type="tel" placeholder="(__) _____ - ____" name="cellphone">
                 </div>
               </div>
 
-              <div class="btn-border">
+              <div class="border btn-border mobile-w-100">
                 <button class="btn">
                   <div class="btn-content">
                     <span> Cadastrar interesse </span>
@@ -267,14 +267,14 @@
 
   <footer>
     <div class="container">
-      <img src="./static/img/logo.svg"/>
+      <img class="order-2 mobile-order-1" src="./static/img/logo.svg"/>
 
       <div class="link-container">
-        <a href="https://www.instagram.com/codebankhq/" class="subtitle">Instagram</a>
-        <a href="https://twitter.com/CodebankHQ" class="subtitle">Twitter </a>
+        <a href="https://www.instagram.com/codebankhq/" class="subtitle mobile-order-2">Instagram </a>
+        <a href="https://twitter.com/CodebankHQ" class="subtitle mobile-order-2">Twitter </a>
       </div>
 
-      <span class="subtitle">© 2020</span>
+      <span class="subtitle order-3">© 2020</span>
     </div>
   </footer>
 

@@ -110,12 +110,14 @@ body {
 }
 
 .subtitle {
-    font-family: "JetBrains Mono";
     font-size: 1.6rem;
     color: white;
 }
 
-.btn, input {
+.btn,
+input,
+.subtitle,
+main #intro .registered-people {
     font-family: "JetBrains Mono";
 }
 
@@ -130,7 +132,6 @@ body {
 }
 
 main #intro .registered-people {
-    font-family: "JetBrains Mono";
     display: flex;
     align-items: center;
 }
@@ -143,17 +144,11 @@ body {
     font-size: 1.6rem;
 }
 
-html,
-body {
-    height: 100vh;
-}
-
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 80%;
     max-width: 100%;
     margin: auto;
 }
@@ -189,28 +184,24 @@ main #intro {
     margin: 50px 0;
 }
 
+.container {
+    width: 80%;
+}
+
 main .container {
     display: flex;
     flex-direction: row;
     max-width: 100%;
-    width: 80%;
     margin: auto;
     color: white;
     justify-content: space-between;
 }
 
 main #intro .title {
-    font-family: "Rubik";
-    font-style: medium;
     line-height: 3.6rem;
-    color: white;
     text-align: left;
     width: 65%;
     margin: 80px 0 0 0;
-}
-
-main #intro .subtitle {
-    width: 50%;
 }
 
 main #intro .registered-people {
@@ -250,12 +241,15 @@ h1 {
 
  .btn-border {
     border: 1px solid #D4D73B;
-    border-radius: 2px;
     margin: 180px 0 0 0;
+    width: 300px;
+}
+
+.border {
+    border-radius: 2px;
     position: relative;
     top: 10px;
     left: 10px;
-    width: 300px;
 }
 
 .btn-content {
@@ -266,83 +260,59 @@ h1 {
 
 .input-border {
     border: 1px solid white;
-    border-radius: 2px;
-    position: relative;
-    top: 10px;
-    left: 10px;
 }
 
-main #register-form .container input {
-    position: relative;
+input {
     bottom: 10px;
     right: 10px;
-    width: 100%;
     height: 56px;
     border: none;
     padding: 0;
 }
 
-main #digital-account .container .account-image,
-main #code-line #termynal {
+.order-1 {
     order: 1;
 }
 
-main #digital-account .container .content,
-main #code-line .content {
+.order-2 {
     order: 2;
 }
 
-main #digital-account .subtitle,
-main #card .subtitle,
-main #code-line .subtitle {
-    width: 75%;
+.order-3 {
+    order: 3;
 }
 
-main #digital-account .content,
-main #card .content,
-main #code-line .content,
-main #termynal,
-main #register-form .form-content {
-    position: relative;
-    width: 45%;
-}
-
-main #api .content,
-main #register-form .content {
-    position: relative;
-    width: 50%;
-}
-
-main #api .transactions .content {
-    width: 100%;
-}
-
-main #digital-account .benefits,
-main #card .contactless,
-main #api .transactions {
+.position-bottom {
     position: absolute;
     bottom: 0;
 }
 
-main #digital-account .account-image,
-main #card .card-image {
+.w-35 {
     width: 35%;
 }
 
-main #api .code-image,
-main #register-form .content .subtitle {
+.w-45 {
+    width: 45%;
+}
+
+.w-50 {
     width: 50%;
 }
 
-main #digital-account .account-image img,
-main #card .card-image img,
-main #api img {
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
     width: 100%;
 }
 
-#intro, #digital-account,
-#card, #api, #code-line {
+.h-full {
     height: 100vh;
+}
+
+.relative {
+    position: relative;
 }
 
 main #api .transactions .content {
@@ -387,20 +357,8 @@ footer .container{
     justify-content: space-between;
 }
 
-footer .container .link-container a{
+footer .container .link-container a {
     text-decoration: none;
-}
-
-footer .container .link {
-    order: 1;
-}
-
-footer .container img {
-    order: 2;
-}
-
-footer .container span {
-    order: 3;
 }
 
 @media (max-width: 1637px){
@@ -414,12 +372,11 @@ footer .container span {
         font-size: 1.4rem;
     }
 
-    header .container {
+    .container {
         width: 90%;
     }
 
     main .container {
-        width: 90%;
         justify-content: space-between;
         margin: auto;
     }
@@ -478,14 +435,6 @@ footer .container span {
         font-size: 1.2rem;
     }
 
-    header .container {
-        width: 90%;
-    }
-
-    main #intro .container {
-        width: 90%;
-    }
-
     .title {
         font-size: 3.0rem;
     }
@@ -511,9 +460,6 @@ footer .container span {
     }
 
     main #intro .btn-border {
-        position: relative;
-        top: 10px;
-        left: 10px;
         width: 50%;
     }
 
@@ -556,23 +502,9 @@ footer .container span {
         width: 70%;
     }
 
-    main #intro .mockup img {
-        width: 100%;
-    }
-
     main #intro .btn-border {
         margin: 80px 0 0 0;
-        position: relative;
-        top: 10px;
-        left: 10px;
         width: 250px;
-    }
-
-    main #intro .btn {
-        width: 100%;
-        position: relative;
-        bottom: 10px;
-        right: 10px;
     }
 
     main #intro .registered-people {
@@ -582,15 +514,6 @@ footer .container span {
 }
 
 @media (max-width: 980px) {
-    main #termynal {
-        width: 100%;
-    }
-
-    main #intro, #digital-account,
-    #card, #code-line, #api {
-        height: 100vh;
-    }
-
     .btn-border {
         margin: 0;
     }
@@ -605,10 +528,6 @@ footer .container span {
         font-size: 50%;
     }
 
-    header .container {
-        width: 90%;
-    }
-
     .title {
         color: white;
         font-size: 4.0rem;
@@ -619,19 +538,11 @@ footer .container span {
         font-size: 3.0rem;
     }
 
-    main {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     main .container {
         display: block;
-        width: 90%;
         max-width: 100%;
         margin: auto;
     }
-
 
     main #intro .container{
         display: flex;
@@ -647,31 +558,12 @@ footer .container span {
         width: 60%;
     }
 
-    main #intro .mockup {
-        width: 100%;
-    }
-
-    main #intro .mockup img {
-        width: 100%;
-    }
-
-    main #intro .subtitle {
-        width: 100%;
-    }
-
     main #intro .container .content {
-        order: 2;
-        position: relative;
         bottom: 120px;
-    }
-
-    main #intro .container .mockup {
-        order: 1;
     }
 
     main #intro .btn {
       margin: 0;
-      width: 100%;
       font-size: 3.2rem;
       position: relative;
       bottom: 10px;
@@ -681,16 +573,12 @@ footer .container span {
 
     main #intro .btn-border {
         margin: 0;
-        position: relative;
-        top: 10px;
-        left: 10px;
         width: 100%;
     }
 
     main #intro .registered-people {
         margin: 25px 0 0 0;
         font-size: 3.0rem;
-        width: 100%;
     }
 
     main #intro .registered-people img {
@@ -701,54 +589,28 @@ footer .container span {
     main #digital-account .account-image {
         display: flex;
         justify-content: center;
-        width: 100%;
     }
 
     main #digital-account .account-image img {
         width: 90%;
     }
 
-    main #digital-account .subtitle,
-    main #card .subtitle,
-    main #code-line .subtitle {
+    .mobile-w-100 {
         width: 100%;
     }
 
-    main #digital-account .content,
-    main #card .content,
-    main #code-line .content,
-    main #api .content,
-    main #register-form .content {
-        width: 100%;
-    }
-
-    main #digital-account .benefits,
-    main #card .contactless {
+    .mobile-relative {
         position: relative;
     }
 
     main #card .card-image {
         display: flex;
         justify-content: center;
-        width: 100%;
-    }
-
-    main #card .card-image img {
-        width: 100%;
     }
 
     main #api .code-image {
         display: flex;
         justify-content: center;
-        width: 100%;
-    }
-
-    main #api .code-image img {
-        width: 100%;
-    }
-
-    main #api .transactions {
-        position: relative;
     }
 
     main #register-form .container .content, .form-content {
@@ -766,36 +628,30 @@ footer .container span {
         margin: auto;
         border: none;
         padding: 0;
-        width: 100%;
         font-size: 1.8rem;
      }
 
-     form {
+     main #intro .subtitle,
+     main #intro .mockup img,
+     main #intro .mockup {
          width: 100%;
      }
 
      .form-group {
-        width: 100%;
         margin: 25px 0 0 0;
      }
 
      main #register-form .container .btn-border {
         margin: 25px 0 0 0;
-        width: 100%;
      }
 
      main #register-form .content .subtitle {
          display: none;
      }
 
-     main #register-form .form-content {
-         width: 100%;
-     }
-
      .input-border {
         margin: 0;
         border-radius: 2px;
-        width: 100%;
     }
 
     footer {
@@ -819,15 +675,15 @@ footer .container span {
         margin: 50px 0 0 0;
     }
 
-    footer .container .link {
-        order: 2;
-    }
-
-    footer .container img {
+    .mobile-order-1 {
         order: 1;
     }
 
-    footer .container span {
+    .mobile-order-2 {
+        order: 2;
+    }
+
+    .mobile-order-3 {
         order: 3;
     }
 
@@ -854,7 +710,6 @@ footer .container span {
     }
 
     main #intro .container .content {
-        position: relative;
         bottom: 95px;
     }
 
@@ -903,29 +758,11 @@ footer .container span {
         margin: 25px 0 0 0;
         font-size: 2.2rem;
     }
-
-    main #intro .registered-people img {
-        width: 90px;
-        height: 42px;
-    }
 }
 
 @media (max-width: 490px) {
     [data-termynal] {
         font-size: 1.2rem;
-    }
-
-    html {
-        font-size: 50%;
-    }
-
-    body {
-        height: 100vh;
-        width: 100%;
-    }
-
-    header .container {
-        width: 90%;
     }
 
     header .container .logo {
@@ -941,60 +778,22 @@ footer .container span {
         font-size: 2.2rem;
     }
 
-    main #intro {
-        margin: 0;
-    }
-
-    main #intro .container {
-        flex-direction: column;
-        justify-content: center;
-        width: 90%;
-    }
-
     main #intro .title {
-        margin: 0;
         width: 90%;
-    }
-
-    main #intro .mockup img {
-        width: 100%;
     }
 
     main #intro .container .content {
-        order: 2;
-        position: relative;
         bottom: 85px;
     }
 
-    main #intro .container .mockup {
-        order: 1;
-    }
-
     main #intro .btn {
-      margin: 0;
-      width: 100%;
       font-size: 2.4rem;
       height: 67px;
-      position: relative;
-      bottom: 10px;
-      right: 10px;
-    }
-
-    main #intro .btn-border {
-        margin: 0;
-        position: relative;
-        top: 10px;
-        left: 10px;
     }
 
     main #intro .registered-people {
         margin: 25px 0 0 0;
         font-size: 2.2rem;
-    }
-
-    main #intro .registered-people img {
-        width: 90px;
-        height: 42px;
     }
 }
 
@@ -1002,10 +801,6 @@ footer .container span {
     [data-termynal] {
         font-size: 1.2rem;
         padding: 50px 20px 20px;
-    }
-
-    header .container {
-        width: 90%;
     }
 
     header .container .logo {
@@ -1021,14 +816,9 @@ footer .container span {
         font-size: 2.0rem;
     }
 
-    main #intro {
-        margin: 0;
-    }
-
     main #intro .container {
         flex-direction: column;
         justify-content: center;
-        width: 90%;
     }
 
     main #intro .title {
@@ -1036,13 +826,7 @@ footer .container span {
     }
 
     main #intro .container .content {
-        order: 2;
-        position: relative;
         bottom: 50px;
-    }
-
-    main #intro .container .mockup {
-        order: 1;
     }
 
     main #intro .btn {
@@ -1050,16 +834,6 @@ footer .container span {
       width: 100%;
       font-size: 2.2rem;
       height: 67px;
-      position: relative;
-      bottom: 10px;
-      right: 10px;
-    }
-
-    main #intro .btn-border {
-        margin: 0;
-        position: relative;
-        top: 10px;
-        left: 10px;
     }
 
     main #intro .registered-people {
@@ -1098,7 +872,6 @@ footer .container span {
 
     main #intro .btn-border {
         margin: 0;
-        position: relative;
         top: 5px;
         left: 5px;
     }
