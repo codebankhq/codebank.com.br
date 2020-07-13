@@ -361,6 +361,14 @@ footer .container .link-container a {
     text-decoration: none;
 }
 
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
 @media (max-width: 1637px){
     [data-termynal] {
         font-size: 1.6rem;
@@ -514,6 +522,14 @@ footer .container .link-container a {
 }
 
 @media (max-width: 980px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
     .btn-border {
         margin: 0;
     }

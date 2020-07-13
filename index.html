@@ -116,14 +116,20 @@
           <p class="subtitle non-highlighted w-75 mobile-w-100">
             Faça parte da Codebank solicitando agora sua Conta
           </p>
+
+          <div class="benefits desktop position-bottom">
+            <p class="subtitle w-75">
+              Somos livres de astericos & tarifas escondidas.
+            </p>
+          </div>
         </div>
 
         <div class="w-35 account-image order-1 mobile-w-100">
           <img class="w-100" src="./static/img/account.svg" />
         </div>
 
-        <div class="benefits position-bottom mobile-relative">
-          <p class="subtitle w-75 mobile-w-100">
+        <div class="benefits mobile mobile-relative">
+          <p class="subtitle mobile-w-100">
             Somos livres de astericos & tarifas escondidas.
           </p>
         </div>
@@ -141,15 +147,22 @@
           <p class="subtitle non-highlighted w-75 mobile-w-100">
             Faça parte da Codebank solicitando agora sua Conta
           </p>
+
+          <div class="contactless desktop position-bottom">
+            <img src="./static/img/contactless.svg" />
+            <p class="subtitle w-75">
+              Adicione seu cartão na Wallet. Apenas toque e pague rápido com o contactless
+            </p>
+          </div>
         </div>
 
         <div class="w-35 card-image mobile-w-100">
           <img class="w-100" src="./static/img/card.svg" />
         </div>
 
-        <div class="contactless position-bottom mobile-relative">
+        <div class="contactless mobile mobile-relative">
           <img src="./static/img/contactless.svg" />
-          <p class="subtitle w-75 mobile-w-100">
+          <p class="subtitle mobile-w-100">
             Adicione seu cartão na Wallet. Apenas toque e pague rápido com o contactless
           </p>
         </div>
@@ -191,13 +204,28 @@
           <p class="subtitle non-highlighted">
             Faça parte da Codebank solicitando agora sua Conta
           </p>
+
+          <div class="transactions desktop position-bottom">
+            <div class="w-100 relative content">
+              <span class="trace"></span>
+              <div class="ted">
+                <h1 class="title">
+                  <span class="marked">Ted</span>
+                </h1>
+              </div>
+            </div>
+
+            <h1 class="title bank-slip">
+              Boleto
+            </h1>
+          </div>
         </div>
 
         <div class="w-50 code-image mobile-w-100">
           <img class="w-100" src="./static/img/code.svg"/>
         </div>
 
-        <div class="transactions position-bottom mobile-relative">
+        <div class="transactions mobile mobile-relative">
           <div class="w-100 relative content">
             <span class="trace"></span>
             <div class="ted">
@@ -269,10 +297,13 @@
     <div class="container">
       <img class="order-2 mobile-order-1" src="./static/img/logo.svg"/>
 
-      <div class="link-container">
-        <a href="https://www.instagram.com/codebankhq/" class="subtitle mobile-order-2">Instagram </a>
-        <a href="https://twitter.com/CodebankHQ" class="subtitle mobile-order-2">Twitter </a>
+      <div class="link-container desktop">
+        <a href="https://twitter.com/CodebankHQ" class="subtitle">Twitter</a>
+        <a href="https://www.instagram.com/codebankhq/" class="subtitle">Instagram</a>
       </div>
+
+      <a href="https://www.instagram.com/codebankhq/" class="subtitle mobile mobile-order-2 link">Instagram</a>
+      <a href="https://twitter.com/CodebankHQ" class="subtitle mobile mobile-order-2 link">Twitter</a>
 
       <span class="subtitle order-3">© 2020</span>
     </div>
@@ -281,67 +312,6 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/termynal.min.js"></script>
   <script>
     var termynal = new Termynal('#termynal');
-
-    function addToContent() {
-      const benefits = document.querySelector('#digital-account .benefits');
-      const contactless = document.querySelector('#card .contactless');
-      const transactions = document.querySelector('#api .transactions');
-
-      if(benefits && contactless && transactions){
-        document.querySelector('#digital-account .content').appendChild(benefits);
-        document.querySelector('#card .content').appendChild(contactless);
-        document.querySelector('#api .content').appendChild(transactions);
-      }
-    }
-
-    function removeFromContent() {
-      const benefits = document.querySelector('#digital-account .content .benefits');
-      const contactless = document.querySelector('#card .content .contactless');
-      const transactions = document.querySelector('#api .content .transactions');
-
-      if(benefits && contactless && transactions) {
-        document.querySelector("#digital-account .container").appendChild(benefits);
-        document.querySelector('#card .container').appendChild(contactless);
-        document.querySelector('#api .container').appendChild(transactions);
-      }
-    }
-
-    function addTagToContainer() {
-      const links = document.querySelectorAll('footer .container .link-container a');
-      const container = document.querySelector('footer .container');
-
-      if(links && container){
-        links[0].classList.add('link');
-        links[1].classList.add('link');
-        container.appendChild(links[0]);
-        container.appendChild(links[1]);
-      }
-    }
-
-    function addTagToLinkContainer() {
-      const links = document.querySelectorAll('footer .container a');
-      const linkContainer = document.querySelector('footer .container .link-container');
-
-      if(links && linkContainer){
-        links[0].classList.remove('link');
-        links[1].classList.remove('link');
-        linkContainer.appendChild(links[1]);
-        linkContainer.appendChild(links[0]);
-      }
-    }
-
-    function onResize() {
-      if(window.innerWidth > 980){
-        addToContent();
-        addTagToLinkContainer();
-      } else {
-        removeFromContent();
-        addTagToContainer();
-      }
-    }
-
-    onResize();
-    window.onresize = onResize;
   </script>
 </body>
 
