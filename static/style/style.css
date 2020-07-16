@@ -117,7 +117,8 @@ body {
 .btn,
 input,
 .subtitle,
-main #intro .registered-people {
+main #intro .registered-people,
+pre code {
     font-family: "JetBrains Mono";
 }
 
@@ -369,6 +370,10 @@ footer .container .link-container a {
     display: none;
 }
 
+pre code {
+    font-size: 1.2rem;
+}
+
 @media (max-width: 1637px){
     [data-termynal] {
         font-size: 1.6rem;
@@ -436,6 +441,10 @@ footer .container .link-container a {
         margin: 25px 0 0 0;
         font-size: 1.6rem;
     }
+
+    pre code {
+        font-size: 1.0rem;
+    }
 }
 
 @media (max-width: 1350px) {
@@ -480,6 +489,10 @@ footer .container .link-container a {
         margin: 25px 0 0 0;
         font-size: 1.6rem;
     }
+
+    pre code {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -518,6 +531,10 @@ footer .container .link-container a {
     main #intro .registered-people {
         margin: 25px 0 0 0;
         font-size: 1.4rem;
+    }
+
+    pre code {
+        font-size: 0.8rem;
     }
 }
 
@@ -706,6 +723,10 @@ footer .container .link-container a {
     .link {
         text-decoration: underline;
     }
+
+    pre code {
+        font-size: 1.0rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -742,6 +763,10 @@ footer .container .link-container a {
         width: 90px;
         height: 42px;
     }
+
+    pre code {
+        font-size: 1.0rem;
+    }
 }
 
 @media (max-width: 620px) {
@@ -773,6 +798,10 @@ footer .container .link-container a {
     main #intro .registered-people {
         margin: 25px 0 0 0;
         font-size: 2.2rem;
+    }
+
+    pre code {
+        font-size: 0.85rem;
     }
 }
 
@@ -810,6 +839,10 @@ footer .container .link-container a {
     main #intro .registered-people {
         margin: 25px 0 0 0;
         font-size: 2.2rem;
+    }
+
+    pre code {
+        font-size: 0.7rem;
     }
 }
 
@@ -861,6 +894,10 @@ footer .container .link-container a {
         width: 90px;
         height: 42px;
     }
+
+    pre code {
+        font-size: 0.6rem;
+    }
 }
 
 @media (max-width: 357px) {
@@ -900,5 +937,9 @@ footer .container .link-container a {
     main #intro .registered-people img {
         width: 80px;
         height: 36px;
+    }
+
+    pre code {
+        font-size: 0.55rem;
     }
 }

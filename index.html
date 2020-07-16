@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/style/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/atom-one-dark.min.css" integrity="sha512-Fcqyubi5qOvl+yCwSJ+r7lli+CO1eHXMaugsZrnxuU4DVpLYWXTVoHy55+mCb4VZpMgy7PBhV7IiymC0yu9tkQ==" crossorigin="anonymous" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Facebook Pixel Code -->
@@ -221,8 +222,30 @@
           </div>
         </div>
 
-        <div class="w-50 code-image mobile-w-100">
-          <img class="w-100" src="./static/img/code.svg"/>
+        <div class="code-image">
+          <pre class="w-100">
+            <code class="javascript">// Faz o require da lib do Codebank e inicia com uma chave de teste
+              const cb = require('@codebank/ted')('test_ghvbityg9086tftuhkgvtr8r7ityghuf');
+
+              // Cria e envia a TED
+              const tx = await cb({
+                amount: 250 * 100, // centavos
+                description: "Manutenção do carro",
+                bank: 341,
+                holder: "Danniel Magno",
+                document: "091.359.036-35",
+                agency: "0925",
+                account: "09119-1"
+              });
+
+
+
+
+
+
+
+            </code>
+          </pre>
         </div>
 
         <div class="transactions mobile mobile-relative">
@@ -310,7 +333,20 @@
   </footer>
 
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/termynal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js" integrity="sha512-axd5V66bnXpNVQzm1c7u1M614TVRXXtouyWCE+eMYl8ALK8ePJEs96Xtx7VVrPBc0UraCn63U1+ARFI3ofW+aA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   <script>
+    $("pre code").each(function(){
+      var html = $(this).html();
+      var pattern = html.match(/\s*\n[\t\s]*/);
+      $(this).html(html.replace(new RegExp(pattern, "g"),'\n'));
+    });
+
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+
     var termynal = new Termynal('#termynal');
   </script>
 </body>
