@@ -343,7 +343,7 @@ main #api .transactions .title {
 }
 
 main #register-form .container {
-    width: 75%;
+    width: 70%;
     background-color: #191919;
     justify-content: left;
     padding: 5% 5%;
@@ -363,10 +363,8 @@ footer .container{
     margin: auto;
     display: flex;
     justify-content: space-between;
-}
-
-footer .container .link-container a {
-    text-decoration: none;
+    align-items: center;
+    height: 56px;
 }
 
 .desktop {
@@ -379,6 +377,14 @@ footer .container .link-container a {
 
 pre code {
     font-size: 1.2rem;
+}
+
+.footer-line.top {
+    margin: 60px 0 0 0;
+}
+
+.footer-line.bottom {
+    margin: 0 0 10px 0;
 }
 
 @media (max-width: 1637px){
@@ -402,7 +408,7 @@ pre code {
     }
 
     main #register-form .container {
-        width: 85%;
+        width: 80%;
     }
 
     .title {
@@ -451,6 +457,10 @@ pre code {
 
     pre code {
         font-size: 1.0rem;
+    }
+
+    footer .container{
+        width: 90%;
     }
 }
 
@@ -695,7 +705,7 @@ pre code {
     }
 
     footer {
-        margin: 50px 0 0 0;
+        margin: 25px 0;
     }
 
     footer .container {
@@ -705,6 +715,7 @@ pre code {
         margin: auto;
         justify-content: center;
         align-items: center;
+        height: auto;
     }
 
     footer .link {
