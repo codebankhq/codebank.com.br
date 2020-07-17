@@ -206,21 +206,23 @@
             Faça parte da Codebank solicitando agora sua Conta
           </p>
 
-          <div class="transactions desktop position-bottom">
-            <div class="w-100 relative content">
+          <div class="w-50 transactions desktop position-bottom">
+            <div class="relative transaction-item selected">
               <span class="trace"></span>
-              <div class="ted">
-                <h1 class="title">
-                  <span class="marked">Ted</span>
+                <h1 class="title marked">
+                 Ted
                 </h1>
-              </div>
             </div>
 
-            <h1 class="title bank-slip">
-              Boleto
-            </h1>
+            <div class="relative transaction-item not-selected">
+              <span class="trace"></span>
+                <h1 class="title">
+                 Boleto
+                </h1>
+            </div>
           </div>
         </div>
+
 
         <div class="code-image">
           <pre class="w-100">
@@ -249,18 +251,19 @@
         </div>
 
         <div class="transactions mobile mobile-relative">
-          <div class="w-100 relative content">
+          <div class="w-100 relative transaction-item selected">
             <span class="trace"></span>
-            <div class="ted">
-              <h1 class="title">
-                <span class="marked">Ted</span>
+              <h1 class="title marked">
+                Ted
               </h1>
-            </div>
           </div>
 
-          <h1 class="title bank-slip">
-            Boleto
-          </h1>
+          <div class="w-100 relative transaction-item not-selected">
+            <span class="trace"></span>
+              <h1 class="title">
+                Boleto
+              </h1>
+          </div>
         </div>
       </div>
     </section>
@@ -337,18 +340,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js" integrity="sha512-axd5V66bnXpNVQzm1c7u1M614TVRXXtouyWCE+eMYl8ALK8ePJEs96Xtx7VVrPBc0UraCn63U1+ARFI3ofW+aA==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js" integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-  <script>
-    $("pre code").each(function(){
-      var html = $(this).html();
-      var pattern = html.match(/\s*\n[\t\s]*/);
-      $(this).html(html.replace(new RegExp(pattern, "g"),'\n'));
-    });
 
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-
-    var termynal = new Termynal('#termynal');
-  </script>
+  <script src="./static/js/highlight.js"></script>
+  <script src="./static/js/termynal.js"></script>
+  <script src="./static/js/transactions.js"></script>
 </body>
 
 </html>

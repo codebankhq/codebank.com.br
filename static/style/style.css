@@ -129,7 +129,7 @@ pre code {
 }
 
 .marked {
-    color: #D4D73B;
+    color: #D4D73B!important;
 }
 
 main #intro .registered-people {
@@ -316,16 +316,23 @@ input {
     position: relative;
 }
 
-main #api .transactions .content {
+main #api .transactions .selected {
     display: flex;
     align-items: center;
-    margin: 25px 0 0 0;
     background: linear-gradient(90deg, #191919 0%, rgba(25, 25, 25, 0) 100%);
     border-radius: 2px;
     height: 56px;
+    cursor: pointer;
 }
 
-main #api .transactions .trace {
+main #api .transactions .not-selected {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    cursor: pointer;
+}
+
+main #api .transaction-item.selected .trace {
     width: 1%;
     height: 100%;
     background-color: #D4D73B;
