@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Codebank</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169521310-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169521310-2');
+  </script>
+  <!-- End of Global site tag (gtag.js) -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/index.scss">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/atom-one-dark.min.css"
+    integrity="sha512-Fcqyubi5qOvl+yCwSJ+r7lli+CO1eHXMaugsZrnxuU4DVpLYWXTVoHy55+mCb4VZpMgy7PBhV7IiymC0yu9tkQ=="
+    crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '823600328047845');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=823600328047845&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body class="">
+  <header class="header">
+    <div class="container">
+      <a class="header__logo" href="/">
+        <img src="./img/logo.svg" alt="Codebank" />
+      </a>
+
+      <nav>
+        <ul>
+          <li>
+            <button class="btn btn--header" type="button">Cadastrar</button>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="container">
+        <div class="intro__mockup">
+          <img src="./img/mockup.svg">
+        </div>
+
+        <div class="intro__content">
+          <h1 class="title">
+            Banco totalmente digital. 💸😻
+            <span class="non-highlighted">Para desenvolvedores</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Permitimos que você personalize de
+            acordo com suas necessidades
+          </p>
+
+          <div class="border border--yellow">
+            <button class="border__btn border__btn--yellow">
+              <div class="border__btn__content border__btn__content--arrow">
+                <span> Cadastrar </span>
+              </div>
+            </button>
+          </div>
+
+          <div class="intro__registered">
+            <img src="./img/people.png" />
+
+            &nbsp;
+
+            <span class="subtitle non-highlighted">
+              566 pessoas cadastradas
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="account">
+      <div class="container">
+        <div class="account__content">
+          <h1 class="title">
+            Conta digital. 🏦
+            <span class="non-highlighted">Sem taxa de manutenção e nem tarifas.</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Faça parte da Codebank solicitando agora sua Conta
+          </p>
+        </div>
+
+        <div class="account__image">
+          <img src="./img/account.svg" />
+        </div>
+
+        <div class="benefits mobile mobile-relative">
+          <p class="subtitle">
+            Somos livres de astericos & tarifas escondidas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="container">
+        <div class="card__content">
+          <h1 class="title">
+            Novo <span class="marked">CodeCard</span>. 💳 <span class="non-highlighted">Use débito ou crédito, você é
+              quem sabe</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Faça parte da Codebank solicitando agora sua Conta
+          </p>
+        </div>
+
+        <div class="card__image">
+          <img src="./img/card.svg" />
+        </div>
+
+        <div class="card__contactless">
+          <img src="./img/contactless.svg" />
+          <p class="subtitle">
+            Adicione seu cartão na Wallet. Apenas toque e pague rápido com o contactless
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="codeline">
+      <div class="container">
+        <div class="codeline__content">
+          <h1 class="title">
+            Faça pagamentos com <span class="marked">uma linha de código</span>. ✨
+            <span class="non-highlighted">Simples.</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Faça parte da Codebank solicitando agora sua Conta
+          </p>
+        </div>
+
+        <div class="border border--gray border--termynal">
+          <div class="codeline__border__termynal" data-termynal data-ty-typeDelay="70" data-ty-lineDelay="900">
+            <span data-ty="input" data-ty-prompt="$">cb pay 13691402750500290410887318880015982870000012000</span>
+            <span data-ty>Você deseja pagar o boleto da Aeogi, no valor de R$ 120,00?</span>
+            <span data-ty="input" data-ty-typeDelay="1000" data-ty-prompt="(s/N)">s</span>
+            <span data-ty="progress" data-ty-progressChar="·"></span>
+            <span data-ty>Pagamento efetuado com sucesso!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="api">
+      <div class="container">
+        <div class="api__content">
+          <h1 class="title">
+            API de <span class="marked">Ted</span> e <span class="marked">Boleto</span>. 💸 📑
+            <span class="non-highlighted"> Pague e faça emissão e recebimento de TED's.</span>
+          </h1>
+
+          <p class="subtitle non-highlighted">
+            Faça parte da Codebank solicitando agora sua Conta
+          </p>
+
+
+          <div class="api__code">
+            <pre>
+            <code class="javascript">// Faz o require da lib do Codebank e inicia com uma chave de teste
+              const cb = require('@codebank/ted')('test_ghvbityg9086tftuhkgvtr8r7ityghuf');
+
+              // Cria e envia a TED
+              const tx = await cb({
+                amount: 250 * 100, // centavos
+                description: "Manutenção do carro",
+                bank: 341,
+                holder: "Danniel Magno",
+                document: "091.359.036-35",
+                agency: "0925",
+                account: "09119-1"
+              });
+
+
+
+
+
+
+
+            </code>
+          </pre>
+          </div>
+
+          <div class="api__transactions">
+            <div class="api__transactions__item api__transactions__item--selected">
+              <span class="api__transactions__item__trace"></span>
+              <h1 class="title marked">
+                Ted
+              </h1>
+            </div>
+
+            <div class="api__transactions__item api__transactions__item--notselected">
+              <span class="api__transactions__item__trace"></span>
+              <h1 class="title">
+                Boleto
+              </h1>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="register">
+      <div class="container">
+        <div class="register__background">
+          <div class="register__content">
+            <h1 class="title">🚀✨</h1>
+            <h1 class="title">
+              Cadastre-se e seja <span class="marked">um dos primeiros</span> a ter acesso!
+            </h1>
+          </div>
+
+          <div class="register__form-content">
+            <form>
+              <div class="register__form-content__form-group">
+                <label for="name" class="subtitle">Seu nome</label>
+                <div class="border border--input">
+                  <input class="border__input" id="name" type="text" placeholder="Informe" name="name">
+                </div>
+              </div>
+
+              <div class="register__form-content__form-group">
+                <label for="email" class="subtitle">E-mail</label>
+                <div class="border border--input">
+                  <input class="border__input" id="email" type="email" placeholder="exemplo@codebank.com" name="email">
+                </div>
+              </div>
+
+              <div class="register__form-content__form-group">
+                <label for="cellphone" class="subtitle">Celular</label>
+                <div class="border border--input">
+                  <input class="border__input" id="cellphone" type="tel" placeholder="(__) _____ - ____"
+                    name="cellphone">
+                </div>
+              </div>
+
+              <div class="register__form-content__btn border border--yellow">
+                <button class="border__btn border__btn--yellow">
+                  <div class="border__btn__content">
+                    <span> Cadastrar interesse </span>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <img class="footer__logo" src="./img/logo.svg" />
+      <a href="https://www.instagram.com/codebankhq/" class="subtitle footer__link">Instagram</a>
+      <a href="https://twitter.com/CodebankHQ" class="subtitle footer__link">Twitter</a>
+
+      <span class="subtitle footer__copyright">© 2020</span>
+    </div>
+  </footer>
+
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/316871/termynal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"
+    integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"
+    integrity="sha512-axd5V66bnXpNVQzm1c7u1M614TVRXXtouyWCE+eMYl8ALK8ePJEs96Xtx7VVrPBc0UraCn63U1+ARFI3ofW+aA=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/javascript.min.js"
+    integrity="sha512-B2u4F4jxoEQ90yVLebzbcexcdZGtECyokKRU0ribbBBxcsZFn6i4n9AU7UjmMFHj08AYiY0GrZsom5lWoZTY3g=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+
+  <script src="./js/highlight.js"></script>
+  <script src="./js/termynal.js"></script>
+  <script src="./js/transactions.js"></script>
+</body>
+
+</html>

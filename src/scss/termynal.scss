@@ -1,0 +1,106 @@
+$color-bg: #222;
+$color-text: #aaa;
+$color-text-subtle: #00ff2b;
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #000;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * termynal.js
+ *
+ * @author Ines Montani <ines@ines.io>
+ * @version 0.0.1
+ * @license MIT
+ */
+
+[data-termynal] {
+    width: 750px;
+    max-width: 100%;
+    background: $color-bg;
+    color: $color-text;
+    font-size: 18px;
+    font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+    border-radius: 4px;
+    padding: 25px 25px 10px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[data-termynal]:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    /* A little hack to display the window buttons in one pseudo element. */
+    background: #d9515d;
+    -webkit-box-shadow: 12px 0 0 #f4c025, 24px 0 0 #3ec930;
+    box-shadow: 12px 0 0 #f4c025, 24px 0 0 #3ec930;
+}
+
+[data-ty] {
+    display: block;
+    line-height: 2;
+}
+
+[data-ty]:before {
+    /* Set up defaults and ensure empty lines are displayed. */
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+}
+
+[data-ty="input"]:before,
+[data-ty-prompt]:before {
+    margin-right: 0.75em;
+    color: $color-text-subtle;
+}
+
+[data-ty="input"]:before {
+    content: '$';
+}
+
+[data-ty][data-ty-prompt]:before {
+    content: attr(data-ty-prompt);
+}
+
+[data-ty-cursor]:after {
+    content: attr(data-ty-cursor);
+    font-family: monospace;
+    margin-left: 0.5em;
+    -webkit-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+}
+
+
+/* Cursor animation */
+
+@-webkit-keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.codeline__border__termynal {
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    height: 110px;
+    font-size: 0.65rem;
+}

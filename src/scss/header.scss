@@ -1,0 +1,29 @@
+.header {
+    height: 68px;
+    border-bottom: 1px solid rgba(#fff, 0.08);
+    .container {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+.header__logo {
+    display: inline-block;
+    margin-top: 10px;
+    img {
+      width: 125px;
+      height: 16px;
+    }
+}
+
+@media (min-width: $desktop) {
+    .header__logo {
+        margin-top: 6px;
+        img {
+            width: 188px;
+            height: 24px;
+        }
+    }
+}

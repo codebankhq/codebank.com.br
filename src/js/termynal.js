@@ -1,7 +1,7 @@
-var termynal = new Termynal('#termynal', { noInit: true });
+var termynal = new Termynal('.codeline__border__termynal', { noInit: true });
 
 var scrolled = false;
-var element_position = $('#termynal').offset().top;
+var element_position = $('.codeline__border__termynal').offset().top;
 var screen_height = $(window).height();
 var activation_offset = 0.5;
 var activation_point = element_position - (screen_height * activation_offset);
