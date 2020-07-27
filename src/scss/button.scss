@@ -46,3 +46,13 @@
         background-repeat: no-repeat;
     }
 }
+
+@media (min-width: $tablet) {
+    .border__btn--yellow {
+        height: 76px;
+    }
+
+    .border__btn__content {
+        font-size: 2.0rem;
+    }
+}

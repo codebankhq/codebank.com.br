@@ -31,3 +31,17 @@
 .register__form-content__btn {
     margin-top: 45px;
 }
+
+@media (min-width: $tablet) {
+    .register__form-content__form-group {
+        input {
+            font-size: 2.0rem;
+        }
+    }
+
+    .register__form-content__btn {
+        .border__btn__content {
+            font-size: 2.4rem;
+        }
+    }
+}

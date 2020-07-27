@@ -1,5 +1,13 @@
+.account {
+    .subtitle {
+        width: 70%;
+    }
+}
+
 .account__image {
+    display: flex;
+    justify-content: center;
     img {
-        width:100%;
+        width:90%;
     }
 }

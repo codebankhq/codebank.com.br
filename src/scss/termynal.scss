@@ -97,10 +97,38 @@ body {
     }
 }
 
+.codeline {
+    .subtitle {
+        width: 70%;
+    }
+}
+
 .codeline__border__termynal {
     position: relative;
     bottom: 5px;
     right: 5px;
     height: 110px;
     font-size: 0.65rem;
+}
+
+@media (min-width: $tablet) {
+    [data-termynal] {
+        padding: 30px 30px 10px;
+    }
+
+    [data-termynal]:before {
+        top: 10px;
+        left: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        /* A little hack to display the window buttons in one pseudo element. */
+        -webkit-box-shadow: 15px 0 0 #f4c025, 30px 0 0 #3ec930;
+        box-shadow: 15px 0 0 #f4c025, 30px 0 0 #3ec930;
+    }
+
+    .codeline__border__termynal {
+        height: 220px;
+        font-size: 1.6rem;
+    }
 }

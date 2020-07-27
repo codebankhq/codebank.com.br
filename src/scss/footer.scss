@@ -17,10 +17,16 @@
 
 .footer__link {
     margin-top: 30px;
-    font-size: 1.4rem;
 }
 
 .footer__copyright {
     margin-top: 66px;
     margin-bottom: 24px;
+}
+
+@media (min-width: $tablet) {
+    .footer__logo {
+        width: 188px;
+        height: 24px;
+    }
 }
