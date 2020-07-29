@@ -52,3 +52,34 @@
         height: 64px;
     }
 }
+
+@media (min-width: $desktop) {
+    .api {
+        position: relative;
+        .container {
+            flex-wrap: wrap;
+        }
+    }
+
+    .api__content {
+        order: 1;
+        width: 50%
+    }
+
+    .api__transactions {
+        order: 2;
+        position: absolute;
+        bottom: 0;
+        width: 40%;
+        .title {
+            font-size: 1.6rem;
+        }
+    }
+
+    .api__code {
+        order: 3;
+        width: 50%;
+        font-size: 1.0rem;
+        height: 420px;
+    }
+}

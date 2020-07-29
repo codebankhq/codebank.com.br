@@ -132,3 +132,29 @@ body {
         font-size: 1.6rem;
     }
 }
+
+@media (min-width: $desktop) {
+    .codeline {
+        .container {
+            flex-wrap: wrap;
+        }
+    }
+
+    [data-termynal] {
+        padding: 55px 30px 10px;
+    }
+
+    .border--termynal {
+        order: 1;
+    }
+
+    .codeline__content {
+        order: 2;
+        width: 50%;
+    }
+
+    .codeline__border__termynal {
+        width: 100%;
+        font-size: 1.0rem;
+    }
+}

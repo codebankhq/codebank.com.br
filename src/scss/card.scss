@@ -16,3 +16,36 @@
         height: 54px;
     }
 }
+
+@media (min-width: $desktop) {
+    .card {
+        position: relative;
+        .container {
+            flex-wrap: wrap;
+        }
+    }
+
+    .card__content {
+        order: 1;
+        width: 50%;
+    }
+
+    .card__contactless {
+        order: 2;
+        position: absolute;
+        bottom: 0;
+        .subtitle {
+            width: 50%;
+        }
+    }
+
+    .card__image {
+        order: 3;
+        flex: 1 1 auto;
+    }
+
+    .card__contactless__image {
+        width: 56px;
+        height: 36px;
+    }
+}

@@ -11,3 +11,33 @@
         width:90%;
     }
 }
+
+@media (min-width: $desktop) {
+    .account {
+        position: relative;
+        .container {
+            flex-wrap: wrap;
+        }
+    }
+
+    .account__image {
+        order: 1;
+    }
+
+    .account__content {
+        order: 2;
+        flex: 1 1 auto;
+        width: 40%;
+    }
+
+    .account__benefits {
+        order: 3;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 58%;
+        .subtitle {
+            width: 40%;
+        }
+    }
+}

@@ -4,7 +4,7 @@
     }
 }
 
-.intro__registered {
+.intro__access__registered {
     margin-top: 25px;
     display: flex;
     align-items: center;
@@ -15,10 +15,41 @@
 }
 
 @media (min-width: $tablet) {
-    .intro__registered {
+    .intro__access__registered {
         img {
             width: 84px;
             height: 36px;
         }
+    }
+}
+
+@media (min-width: $desktop) {
+    .intro {
+        position: relative;
+    }
+
+    .intro__content {
+        order: 1;
+    }
+
+    .intro__mockup {
+        order: 2;
+    }
+
+    .intro {
+        margin-top: 59px;
+    }
+
+    .intro__content {
+        .border--yellow {
+            width: 288px;
+        }
+    }
+
+    .intro__access {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
     }
 }

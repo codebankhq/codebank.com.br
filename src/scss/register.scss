@@ -32,6 +32,12 @@
     margin-top: 45px;
 }
 
+
+.register__request-account {
+    display: none;
+}
+
+
 @media (min-width: $tablet) {
     .register__form-content__form-group {
         input {
@@ -42,6 +48,40 @@
     .register__form-content__btn {
         .border__btn__content {
             font-size: 2.4rem;
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .register__request-account {
+        display: block;
+        width: 70%;
+    }
+
+    .register__background {
+        display: flex;
+        width: 100%;
+    }
+
+    .register__content {
+        order: 1;
+        width: 50%;
+    }
+
+    .register__form-content {
+        order: 2;
+        width: 50%;
+    }
+
+    .register__form-content__btn {
+        .border__btn__content {
+            font-size: 1.6rem;
+        }
+    }
+
+    .register__form-content__form-group {
+        input {
+            font-size: 1.6rem;
         }
     }
 }

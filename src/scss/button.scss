@@ -56,3 +56,9 @@
         font-size: 2.0rem;
     }
 }
+
+@media (min-width: $desktop) {
+    .border__btn--yellow {
+        height: 64px;
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="" lang="en">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -45,7 +45,7 @@
   <!-- End Facebook Pixel Code -->
 </head>
 
-<body class="">
+<body>
   <header class="header">
     <div class="container">
       <a class="header__logo" href="/">
@@ -81,22 +81,24 @@
             acordo com suas necessidades
           </p>
 
-          <div class="border border--yellow">
-            <button class="border__btn border__btn--yellow">
-              <div class="border__btn__content border__btn__content--arrow">
-                <span> Cadastrar </span>
-              </div>
-            </button>
-          </div>
+          <div class="intro__access">
+            <div class="border border--yellow">
+              <button class="border__btn border__btn--yellow">
+                <div class="border__btn__content border__btn__content--arrow">
+                  <span> Cadastrar </span>
+                </div>
+              </button>
+            </div>
 
-          <div class="intro__registered">
-            <img src="./img/people.png" />
+            <div class="intro__access__registered">
+              <img src="./img/people.png" />
 
-            &nbsp;
+              &nbsp;
 
-            <span class="subtitle non-highlighted">
-              566 pessoas cadastradas
-            </span>
+              <span class="subtitle non-highlighted">
+                566 pessoas cadastradas
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -119,7 +121,7 @@
           <img src="./img/account.svg" />
         </div>
 
-        <div class="benefits mobile mobile-relative">
+        <div class="account__benefits">
           <p class="subtitle">
             Somos livres de astericos & tarifas escondidas.
           </p>
@@ -189,10 +191,11 @@
           <p class="subtitle non-highlighted">
             Faça parte da Codebank solicitando agora sua Conta
           </p>
+        </div>
 
 
-          <div class="api__code">
-            <pre>
+        <div class="api__code">
+          <pre>
             <code class="javascript">// Faz o require da lib do Codebank e inicia com uma chave de teste
               const cb = require('@codebank/ted')('test_ghvbityg9086tftuhkgvtr8r7ityghuf');
 
@@ -215,22 +218,21 @@
 
             </code>
           </pre>
+        </div>
+
+        <div class="api__transactions">
+          <div class="api__transactions__item api__transactions__item--selected">
+            <span class="api__transactions__item__trace"></span>
+            <h1 class="title marked">
+              TED
+            </h1>
           </div>
 
-          <div class="api__transactions">
-            <div class="api__transactions__item api__transactions__item--selected">
-              <span class="api__transactions__item__trace"></span>
-              <h1 class="title marked">
-                Ted
-              </h1>
-            </div>
-
-            <div class="api__transactions__item api__transactions__item--notselected">
-              <span class="api__transactions__item__trace"></span>
-              <h1 class="title">
-                Boleto
-              </h1>
-            </div>
+          <div class="api__transactions__item api__transactions__item--notselected">
+            <span class="api__transactions__item__trace"></span>
+            <h1 class="title">
+              Boleto
+            </h1>
           </div>
         </div>
     </section>
@@ -243,6 +245,10 @@
             <h1 class="title">
               Cadastre-se e seja <span class="marked">um dos primeiros</span> a ter acesso!
             </h1>
+
+            <p class="register__request-account subtitle non-highlighted">
+              Faça parte da Codebank solicitando a Conta Digital e nosso Cartão de Crédito.
+            </p>
           </div>
 
           <div class="register__form-content">
@@ -286,8 +292,13 @@
   <footer class="footer">
     <div class="container">
       <img class="footer__logo" src="./img/logo.svg" />
-      <a href="https://www.instagram.com/codebankhq/" class="subtitle footer__link">Instagram</a>
-      <a href="https://twitter.com/CodebankHQ" class="subtitle footer__link">Twitter</a>
+
+      <div class="footer__links">
+        <a href="https://www.instagram.com/codebankhq/"
+          class="subtitle footer__links__item footer__links__item--instagram">Instagram </a>
+        <a href="https://twitter.com/CodebankHQ"
+          class="subtitle footer__links__item footer__links__item--twitter">Twitter </a>
+      </div>
 
       <span class="subtitle footer__copyright">© 2020</span>
     </div>
