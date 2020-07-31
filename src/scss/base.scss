@@ -2,6 +2,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     margin: auto;
+    overflow-x: hidden;
 }
 
 body {
@@ -101,5 +102,15 @@ section {
 
     section {
         margin-bottom: 150px;
+    }
+}
+
+@media (min-width: $widescreen) {
+    .title {
+        font-size: 3.3rem;
+    }
+
+    .subtitle {
+        font-size: 1.6rem;
     }
 }

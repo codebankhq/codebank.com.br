@@ -53,3 +53,18 @@
         flex-direction: column;
     }
 }
+
+@media (min-width: $widescreen) {
+    .intro {
+        .title {
+            width: 80%;
+        }
+        .subtitle {
+            width: 50%;
+        }
+    }
+
+    .intro__access {
+        width: 100%;
+    }
+}

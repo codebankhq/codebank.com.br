@@ -85,3 +85,11 @@
         }
     }
 }
+
+@media (min-width: $widescreen) {
+    .register {
+        .title {
+            width: 80%;
+        }
+    }
+}
