@@ -18,6 +18,14 @@
             flex-wrap: wrap;
             position: relative;
         }
+
+        .title {
+            width: 70%;
+        }
+
+        .subtitle {
+            width: 50%;
+        }
     }
 
     .account__image {
@@ -28,6 +36,8 @@
         order: 2;
         flex: 1 1 auto;
         width: 40%;
+        position: relative;
+        left: 150px;
     }
 
     .account__benefits {
@@ -35,10 +45,7 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 59.5%;
-        .subtitle {
-            width: 40%;
-        }
+        width: 44%;
     }
 }
 
