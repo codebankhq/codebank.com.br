@@ -11,11 +11,6 @@ body {
     margin: auto;
 }
 
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("../font/JetBrainsMono/JetBrainsMono-Regular.ttf") format("truetype");
-}
-
 *,
 *:before,
 *:after {
@@ -39,7 +34,7 @@ section {
 .btn,
 .border__btn,
 .intro__registered {
-    font-family: "JetBrains Mono"
+    font-family: "Fira Mono"
 }
 
 .title, 
