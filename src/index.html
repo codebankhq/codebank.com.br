@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/atom-one-dark.min.css"
     integrity="sha512-Fcqyubi5qOvl+yCwSJ+r7lli+CO1eHXMaugsZrnxuU4DVpLYWXTVoHy55+mCb4VZpMgy7PBhV7IiymC0yu9tkQ=="
     crossorigin="anonymous" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
   <!-- Facebook Pixel Code -->
   <script>
@@ -46,13 +46,13 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" role="banner">
     <div class="container">
       <a class="header__logo" href="/">
         <img src="./img/logo.svg" alt="Codebank" />
       </a>
 
-      <nav>
+      <nav class="nav__btn">
         <ul>
           <li>
             <button class="btn btn--header" type="button">Cadastrar</button>
@@ -60,6 +60,36 @@
         </ul>
       </nav>
 
+      <nav id="nav" class="nav" role="navigation">
+        <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
+          <div class="nav__menu__container">
+            <li class="nav__item"><a href="#card" class="nav__link">CodeCard</a></li>
+            <li class="nav__item"><a href="#api" class="nav__link">API Document</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Sobre nós</a></li>
+          </div>
+
+          <div class="nav__menu__container">
+            <li class="nav__item"> <span class="nav__title">Nossas redes</span></li>
+            <li class="nav__item"><a href="https://twitter.com/CodebankHQ" class="nav__link">Twitter</a></li>
+            <li class="nav__item"><a href="https://www.instagram.com/codebankhq/" class="nav__link">Instagram</a></li>
+          </div>
+        </ul>
+
+        <a href="#nav" class="nav__toggle" role="button" aria-expanded="false" aria-controls="menu">
+          <svg class="menuicon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+            <title>Toggle Menu</title>
+            <g>
+              <line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5" />
+              <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+              <line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5" />
+              <line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5" />
+              <circle class="menuicon__circle" r="23" cx="25" cy="25" />
+            </g>
+          </svg>
+        </a>
+
+        <div class="splash"></div>
+      </nav>
     </div>
   </header>
 
@@ -129,7 +159,7 @@
       </div>
     </section>
 
-    <section class="card">
+    <section id="card" class="card">
       <div class="container">
         <div class="card__content">
           <h1 class="title">
@@ -180,7 +210,7 @@
       </div>
     </section>
 
-    <section class="api">
+    <section id="api" class="api">
       <div class="container">
         <div class="api__content">
           <h1 class="title">
@@ -321,6 +351,7 @@
   <script src="./js/highlight.js"></script>
   <script src="./js/termynal.js"></script>
   <script src="./js/transactions.js"></script>
+  <script src="./js/hamburger.js"></script>
 </body>
 
 </html>
