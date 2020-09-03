@@ -2,11 +2,17 @@
     .subtitle {
         width: 70%;
     }
+
+    .title {
+        margin-bottom: 16px;
+    }
 }
 
 .account__image {
     display: flex;
     justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 24px;
     img {
         width:90%;
     }
@@ -21,6 +27,7 @@
 
         .title {
             width: 70%;
+            margin-bottom: 24px;
         }
 
         .subtitle {
@@ -30,6 +37,8 @@
 
     .account__image {
         order: 1;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .account__content {

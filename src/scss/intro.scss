@@ -5,12 +5,27 @@
 }
 
 .intro__access__registered {
-    margin-top: 25px;
+    margin-top: 32px;
     display: flex;
     align-items: center;
     img {
         width: 56px;
         height: 24px;
+    }
+}
+
+.intro{
+    .title{
+        margin-bottom: 16px;
+    }
+    .subtitle{
+        margin-bottom: 24px;
+    }
+}
+
+.intro__access{
+    .subtitle{
+        margin-bottom: 0px;
     }
 }
 
@@ -26,6 +41,11 @@
 @media (min-width: $desktop) {
     .intro {
         position: relative;
+        margin-top: 89px;
+        .title {
+            margin-top: 59px;
+            margin-bottom: 24px;
+        }
     }
 
     .intro__content {
@@ -34,10 +54,6 @@
 
     .intro__mockup {
         order: 2;
-    }
-
-    .intro {
-        margin-top: 59px;
     }
 
     .intro__content {
@@ -51,6 +67,9 @@
         bottom: 0;
         display: flex;
         flex-direction: column;
+        &__registered {
+            margin-top: 56px;
+        }
     }
 }
 

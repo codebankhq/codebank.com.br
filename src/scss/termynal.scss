@@ -100,6 +100,10 @@ body {
 .codeline {
     .subtitle {
         width: 70%;
+        margin-bottom: 24px;
+    }
+    .title{
+        margin-bottom: 16px;
     }
 }
 
@@ -137,6 +141,12 @@ body {
     .codeline {
         .container {
             flex-wrap: wrap;
+        }
+        .title {
+            margin-bottom: 24px;
+        }
+        .subtitle{
+            margin-bottom: 0px;
         }
     }
 

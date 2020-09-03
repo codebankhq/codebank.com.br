@@ -1,6 +1,8 @@
 .api {
     .subtitle {
         width: 70%;
+        margin-top: 16px;
+        margin-bottom: 48px;
     }
 }
 
@@ -9,8 +11,9 @@
 }
 
 .api__transactions {
+    margin-top: 48px;
     .title {
-        padding-left: 20px;
+        padding: 18px 20px;
     }
 }
 
@@ -63,7 +66,11 @@
 
     .api__content {
         order: 1;
-        width: 50%
+        width: 50%;
+        .subtitle {
+            margin-top: 24px;
+            margin-bottom: 0px;
+        }
     }
 
     .api__transactions {
@@ -71,6 +78,7 @@
         position: absolute;
         bottom: 0;
         width: 40%;
+        margin-top: 0px;
         .title {
             font-size: 1.6rem;
         }

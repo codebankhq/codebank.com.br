@@ -1,6 +1,10 @@
 .card {
     .subtitle {
         width: 70%;
+        margin-bottom: 24px;
+    }
+    .title{
+        margin-bottom: 16px;
     }
 }
 
@@ -8,6 +12,11 @@
     img {
         width: 100%;
     }
+    margin-bottom: 16px;
+}
+
+.card__contactless__image {
+    margin-bottom: 16px;
 }
 
 @media (min-width: $tablet) {
@@ -23,11 +32,17 @@
         .container {
             flex-wrap: wrap;
         }
+        .subtitle{
+            margin-bottom: 0px;
+        }
     }
 
     .card__content {
         order: 1;
         width: 50%;
+        .title {
+            margin-bottom: 24px;
+        }
     }
 
     .card__contactless {
@@ -36,16 +51,19 @@
         bottom: 0;
         .subtitle {
             width: 50%;
+            margin-top: 19px;
         }
     }
 
     .card__image {
         order: 3;
         flex: 1 1 auto;
+        margin-bottom: 0px;
     }
 
     .card__contactless__image {
         width: 56px;
         height: 36px;
+        margin-bottom: 0px;
     }
 }
