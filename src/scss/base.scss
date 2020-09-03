@@ -72,8 +72,9 @@ section {
 }
 
 .border--termynal {
-    bottom: 5px;
-    right: 5px;
+    border-radius: 4px;
+    top: 5px;
+    left: 5px;
 }
 
 @media (min-width: $tablet) {
@@ -97,6 +98,11 @@ section {
 
     section {
         margin-bottom: 150px;
+    }
+
+    .border--termynal {
+        top: 10px;
+        left: 10px;
     }
 }
 
