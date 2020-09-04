@@ -1,12 +1,12 @@
 .footer {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 24px;
     .container {
         display: flex;
         flex-direction: column;
         margin: auto;
         justify-content: center;
         align-items: center;
-        padding: 24px;
     }
 }
 
