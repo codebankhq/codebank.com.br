@@ -63,6 +63,9 @@
 
 @media (min-width: $desktop) {
     .border__btn--yellow {
-        height: 64px;
+        height: 56px;
+    }
+    .border__btn__content {
+        font-size: 1.6rem;
     }
 }
