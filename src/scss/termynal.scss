@@ -27,7 +27,7 @@ body {
     font-size: 18px;
     font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
     border-radius: 4px;
-    padding: 25px 25px 10px;
+    padding: 35px 25px 10px;
     position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -111,13 +111,13 @@ body {
     position: relative;
     bottom: 5px;
     right: 5px;
-    height: 110px;
-    font-size: 0.65rem;
+    height: 128px;
+    font-size: 0.7rem;
 }
 
 @media (min-width: $tablet) {
     [data-termynal] {
-        padding: 30px 30px 10px;
+        padding: 60px 45px 20px;
     }
 
     [data-termynal]:before {
@@ -132,7 +132,7 @@ body {
     }
 
     .codeline__border__termynal {
-        height: 220px;
+        height: 273px;
         font-size: 1.6rem;
     }
 }
@@ -151,7 +151,7 @@ body {
     }
 
     [data-termynal] {
-        padding: 55px 30px 10px;
+        padding: 50px 30px 20px;
     }
 
     .border--termynal {
@@ -164,12 +164,24 @@ body {
     }
 
     .codeline__border__termynal {
-        width: 100%;
         font-size: 1.0rem;
+        bottom: 10px;
+        right: 10px;
+        width: 450px;
+        height: 190px;
+    }
+}
+
+@media (min-width: $widescreen) {
+    [data-termynal] {
+        padding: 50px 33px 20px;
     }
 
     .codeline__border__termynal {
+        font-size: 1.2rem;
         bottom: 10px;
         right: 10px;
+        width: 503px;
+        height: 202px;
     }
 }
