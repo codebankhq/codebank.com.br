@@ -55,7 +55,9 @@
       <nav class="nav__btn">
         <ul>
           <li>
-            <button class="btn btn--header" type="button">Cadastrar</button>
+            <a href="#register">
+              <button class="btn btn--header" type="button">Cadastrar</button>
+            </a>
           </li>
         </ul>
       </nav>
@@ -112,13 +114,15 @@
           </p>
 
           <div class="intro__access">
-            <div class="border border--yellow">
-              <button class="border__btn border__btn--yellow">
-                <div class="border__btn__content border__btn__content--arrow">
-                  <span> Cadastrar </span>
-                </div>
-              </button>
+            <a href="#register">
+              <div class="border border--yellow">
+                <button class="border__btn border__btn--yellow">
+                  <div class="border__btn__content border__btn__content--arrow">
+                    <span> Cadastrar </span>
+                  </div>
+                </button>
             </div>
+            </a>
 
             <div class="intro__access__registered">
               <img src="./img/people.png" />
@@ -267,7 +271,7 @@
         </div>
     </section>
 
-    <section class="register">
+    <section id="register" class="register">
       <div class="container">
         <div class="register__background">
           <div class="register__content">
@@ -352,6 +356,7 @@
   <script src="./js/termynal.js"></script>
   <script src="./js/transactions.js"></script>
   <script src="./js/hamburger.js"></script>
+  <script src="./js/scroll.js"></script>
 </body>
 
 </html>
