@@ -8,10 +8,6 @@
     margin-top: 32px;
     display: flex;
     align-items: center;
-    img {
-        width: 56px;
-        height: 24px;
-    }
 }
 
 .intro{
@@ -26,15 +22,6 @@
 .intro__access{
     .subtitle{
         margin-bottom: 0px;
-    }
-}
-
-@media (min-width: $tablet) {
-    .intro__access__registered {
-        img {
-            width: 84px;
-            height: 36px;
-        }
     }
 }
 
