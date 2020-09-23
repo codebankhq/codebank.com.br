@@ -43,9 +43,28 @@
     border-radius: 2px;
 }
 
+.api__code {
+    code {
+        border-radius: 4px;
+        position: relative;
+        right: 5px;
+        bottom: 25px;
+    }
+}
+
 @media (min-width: $tablet) {
     .api__code {
         font-size: 1.5rem;
+
+        pre{
+            margin: auto;
+        }
+
+        code {
+            position: relative;
+            right: 5px;
+            bottom: 50px;
+        }
     }
 
     .api__transactions__item--selected {
@@ -86,6 +105,20 @@
     }
 
     .api__code {
+        font-size: 1.0rem;
+
+        pre{
+            margin: auto;
+        }
+
+        code {
+            position: relative;
+            right: 8px;
+            bottom: 40px;
+        }
+    }
+
+    .container--api__code {
         order: 3;
         width: 50%;
         font-size: 1.0rem;
@@ -106,5 +139,13 @@
 
     .api__transactions {
         width: 20%;
+    }
+
+    .api__code {
+        font-size: 1.3rem;
+
+        code {
+            bottom: 50px;
+        }
     }
 }
