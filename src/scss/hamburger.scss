@@ -49,6 +49,9 @@
     &__container:first-child {
       margin-top: 19px;
     }
+    &__container:last-child {
+      margin-bottom: 33px;
+    }
   }
 
   &__item {
