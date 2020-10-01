@@ -85,6 +85,12 @@ section {
     height: 142px;
 }
 
+@media (min-width: $medium-mobile) {
+    .border--api__code {
+        height: 164px;
+    }
+}
+
 @media (min-width: $tablet) {
     .title {
         font-size: 3.2rem;
@@ -97,8 +103,8 @@ section {
     .border--api__code {
         position: relative;
         left: 5px;
-        top: 50px;
-        height: 347px;
+        top: 45px;
+        height: 352px;
     }
 }
 
@@ -122,9 +128,9 @@ section {
 
     .border--api__code {
         position: relative;
-        left: 8px;
-        top: 40px;
-        height: 222px;
+        left: 10px;
+        top: 35px;
+        height: 229px;
     }
 }
 
@@ -139,8 +145,8 @@ section {
 
     .border--api__code {
         position: relative;
-        left: 8px;
+        left: 10px;
         top: 50px;
-        height: 280px;
+        height: 291px;
     }
 }
