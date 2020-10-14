@@ -232,7 +232,8 @@
                 <pre>
                   <div class="border border--gray border--api__code">
                     <code class="javascript">// Faz o require da lib do Codebank e inicia com uma chave de teste
-                      const cb = require('@codebank/ted')('test_ghvbityg9086tftuhkgvtr8r7ityghuf');
+                      const API_KEY = 'test_ghvbityg9086tftuhkgvtr8r7ityghuf';
+                      const cb = require('@codebank/ted')(API_KEY);
 
                       // Cria e envia a TED
                       const tx = await cb({
@@ -244,7 +245,6 @@
                         agency: "0925",
                         account: "09119-1"
                       });
-
 
 
 
