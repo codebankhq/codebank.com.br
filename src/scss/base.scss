@@ -1,0 +1,152 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background: $body-bg;
+    font-size: 1.6rem;
+    margin: auto;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+  
+section {
+    margin-bottom: 90px;
+}
+
+.title {
+    font-family: "Rubik";
+    font-size: 2.0rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+}
+
+.subtitle,
+.btn,
+.border__btn,
+.intro__registered {
+    font-family: "Fira Mono"
+}
+
+.title, 
+.subtitle {
+    color: $text-primary;
+}
+
+.non-highlighted {
+    color: $text-secondary
+}
+
+.marked {
+    color: $yellow-primary;
+}
+
+.border {
+    border-radius: 2px;
+    position: relative;
+    top: 8px;
+    left: 8px;
+}
+
+%border-content {
+    position: relative;
+    bottom: 8px;
+    right: 8px;
+}
+
+.border--yellow {
+    border: 1px solid $yellow-primary;
+}
+
+.border--gray {
+    border: 1px solid #222;
+}
+
+.border--termynal {
+    border-radius: 4px;
+    top: 5px;
+    left: 5px;
+}
+
+.border--api__code {
+    position: relative;
+    left: 5px;
+    top: 25px;
+    border-radius: 4px;
+    height: 142px;
+}
+
+@media (min-width: $medium-mobile) {
+    .border--api__code {
+        height: 164px;
+    }
+}
+
+@media (min-width: $tablet) {
+    .title {
+        font-size: 3.2rem;
+    }
+
+    .subtitle {
+        font-size: 2.4rem;
+    }
+
+    .border--api__code {
+        position: relative;
+        left: 5px;
+        top: 45px;
+        height: 352px;
+    }
+}
+
+@media (min-width: $desktop) {
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+    }
+
+    section {
+        margin-bottom: 150px;
+    }
+
+    .border--termynal {
+        top: 10px;
+        left: 10px;
+    }
+
+    .border--api__code {
+        position: relative;
+        left: 10px;
+        top: 35px;
+        height: 229px;
+    }
+}
+
+@media (min-width: $widescreen) {
+    .title {
+        font-size: 3.3rem;
+    }
+
+    .subtitle {
+        font-size: 1.6rem;
+    }
+
+    .border--api__code {
+        position: relative;
+        left: 10px;
+        top: 50px;
+        height: 291px;
+    }
+}

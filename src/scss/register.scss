@@ -1,0 +1,108 @@
+.register__background {
+    border-radius: 5px;
+    background: #191919;
+    padding: 24px 32px 32px 24px;
+}
+
+.register__form-content__form-group {
+    margin-top: 24px;
+    input {
+        margin: auto;
+        border: none;
+        padding: 18px 16px;
+        font-size: 1.4rem;
+        font-family: "Fira mono";
+        height: 100%;
+        width: 100%;
+    }
+    label{
+        position: relative;
+        bottom: 8px;
+    }
+}
+
+.border--input {
+    border: 1px solid white;
+    padding: 0;
+    height: 56px;
+    width: 100%;
+}
+
+.border__input {
+    @extend %border-content;
+}
+
+.register__form-content__btn {
+    margin-top: 32px;
+}
+
+.register__request-account {
+    display: none;
+}
+
+.register__content {
+
+}
+
+@media (min-width: $tablet) {
+    .register__form-content__form-group {
+        input {
+            font-size: 2.0rem;
+        }
+    }
+
+    .register__form-content__btn {
+        .border__btn__content {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .register__request-account {
+        display: block;
+        width: 70%;
+        margin-top: 24px;
+    }
+
+    .register__background {
+        display: flex;
+        width: 100%;
+        padding: 56px;
+    }
+
+    .register__content {
+        order: 1;
+        width: 50%;
+        position: relative;
+        bottom: 8px;
+    }
+
+    .register__form-content {
+        order: 2;
+        width: 50%;
+        position: relative;
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .register__form-content__btn {
+        .border__btn__content {
+            font-size: 1.6rem;
+        }
+    }
+
+    .register__form-content__form-group {
+        input {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media (min-width: $widescreen) {
+    .register {
+        .title {
+            width: 80%;
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.api {
+    .subtitle {
+        width: 70%;
+        margin-top: 16px;
+        margin-bottom: 48px;
+    }
+}
+
+.api__code {
+    font-size: 0.65rem;
+}
+
+.api__transactions {
+    margin-top: 48px;
+    .title {
+        padding: 18px 20px;
+    }
+}
+
+.api__transactions__item--selected {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #191919 0%, rgba(25, 25, 25, 0) 100%);
+    border-radius: 2px;
+    height: 56px;
+    cursor: pointer;
+}
+
+.api__transactions__item--notselected {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    cursor: pointer;
+    span {
+        display: none;
+    }
+}
+
+.api__transactions__item__trace {
+    width: 1%;
+    height: 100%;
+    background-color: #D4D73B;
+    border-radius: 2px;
+}
+
+.api__code {
+    code {
+        border-radius: 4px;
+        position: relative;
+        right: 5px;
+        bottom: 25px;
+    }
+}
+
+@media (min-width: $tablet) {
+    .api__code {
+        font-size: 1.5rem;
+
+        pre{
+            margin: auto;
+        }
+
+        code {
+            position: relative;
+            right: 5px;
+            bottom: 45px;
+        }
+    }
+
+    .api__transactions__item--selected {
+        height: 64px;
+    }
+
+    .api__transactions__item--notselected {
+        height: 64px;
+    }
+}
+
+@media (min-width: $desktop) {
+    .api {
+        position: relative;
+        .container {
+            flex-wrap: wrap;
+        }
+    }
+
+    .api__content {
+        order: 1;
+        width: 50%;
+        .subtitle {
+            margin-top: 24px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .api__transactions {
+        order: 2;
+        position: absolute;
+        bottom: 0;
+        width: 40%;
+        margin-top: 0px;
+        .title {
+            font-size: 1.6rem;
+        }
+    }
+
+    .api__code {
+        font-size: 1.0rem;
+
+        pre{
+            margin: auto;
+        }
+
+        code {
+            position: relative;
+            right: 10px;
+            bottom: 35px;
+        }
+    }
+
+    .container--api__code {
+        order: 3;
+        width: 50%;
+        font-size: 1.0rem;
+        height: 420px;
+    }
+}
+
+@media (min-width: $widescreen) {
+    .api {
+        .title {
+            width: 90%;
+        }
+
+        .subtitle {
+            width: 70%;
+        }
+    }
+
+    .api__transactions {
+        width: 20%;
+    }
+
+    .api__code {
+        font-size: 1.3rem;
+
+        code {
+            bottom: 40px;
+        }
+    }
+}
