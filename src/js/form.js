@@ -1,5 +1,4 @@
-const form = document.getElementsByTagName("form")[0];
-form.onsubmit = function (event) {
+$("form").on("submit", function (event) {
     event.preventDefault();
 
     const body = {
@@ -8,15 +7,7 @@ form.onsubmit = function (event) {
         "phone": event.target[2].value.replace(" ", ""),
     }
 
-    const request = {
-        headers: {
-            "content-type": "application/json; charset=UTF-8",
-        },
-        body: JSON.stringify(body),
-        method: "POST",
-    }
-
-    function onResponse(response) {
+    function onSuccess(response) {
         if (response.status == "success") {
             alert("Cadastro realizado com sucesso!");
         } else {
@@ -28,8 +19,11 @@ form.onsubmit = function (event) {
         alert("Ocorreu algum erro inesperado!");
     }
 
-    fetch(process.env.LEAD_URL, request)
-        .then(data => { return data.json() })
-        .then(onResponse)
-        .catch(onError)
-}
+    $.ajax({
+        type: "POST",
+        url: process.env.LEAD_URL,
+        data: JSON.stringify(body),
+        success: onSuccess,
+        error: onError
+    });
+})
