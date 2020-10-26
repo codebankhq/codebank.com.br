@@ -44,6 +44,13 @@
 
 }
 
+.register__message {
+    display: none;
+    color: white;
+    font-family: "Fira Mono";
+    margin-top: 34px;
+}
+
 @media (min-width: $tablet) {
     .register__form-content__form-group {
         input {

@@ -1,10 +1,48 @@
+const phoneParse = require('telefone/parse');
+
 $("form").on("submit", function (event) {
     event.preventDefault();
+
+    function isEmpty(string) {
+        const regex = new RegExp(/^\s+$/);
+        return string == "" || regex.test(string);
+    }
+
+    function inputError(border, input) {
+        $(border).css("border", "1px solid #E04646");
+        $(input).css("border", "1px solid #E04646");
+    }
+
+    function errorMessage(msg) {
+        let message = $(".register__message");
+        message.css("display", "block");
+        message.html(msg);
+    }
 
     const body = {
         "name": event.target[0].value,
         "email": event.target[1].value,
-        "phone": event.target[2].value.replace(" ", ""),
+        "phone": event.target[2].value,
+    }
+
+    const inputs = $(".border--input");
+
+    if (isEmpty(body.name)) {
+        inputError(inputs[0], inputs[0].firstElementChild);
+        errorMessage("Informe o seu nome.");
+        return;
+    }
+
+    if (isEmpty(body.email)) {
+        inputError(inputs[1], inputs[1].firstElementChild);
+        errorMessage("Informe o seu email.");
+        return;
+    }
+
+    if(body.phone && phoneParse(body.phone) == null) {
+        inputError(inputs[2], inputs[2].firstElementChild);
+        errorMessage("Informe um número válido.");
+        return;
     }
 
     function onSuccess(response) {
@@ -26,4 +64,6 @@ $("form").on("submit", function (event) {
         success: onSuccess,
         error: onError
     });
+
+    return;
 })

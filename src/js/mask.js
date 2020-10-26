@@ -1,6 +1,6 @@
 jQuery(function ($) {
     const cellphone = $("#cellphone");
-    cellphone.mask("(99) 9?9999-9999", { placeholder: "_" });
+    cellphone.mask("(99)9?9999-9999", { placeholder: "_" });
     
     cellphone.on('focus click', function () {
         var regex = new RegExp('[0-9]+');
