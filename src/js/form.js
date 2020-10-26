@@ -39,7 +39,7 @@ $("form").on("submit", function (event) {
         return;
     }
 
-    if(body.phone && phoneParse(body.phone) == null) {
+    if (body.phone && phoneParse(body.phone) == null) {
         inputError(inputs[2], inputs[2].firstElementChild);
         errorMessage("Informe um número válido.");
         return;
@@ -47,14 +47,25 @@ $("form").on("submit", function (event) {
 
     function onSuccess(response) {
         if (response.status == "success") {
-            alert("Cadastro realizado com sucesso!");
+            const title = $("#register .title");
+            const subtitle = $(".register__request-account");
+
+            $(title[1]).html("<span class='marked'> Cadastrado com sucesso! </span>");
+            $("form").css("display", "none");
+
+            if(subtitle.css("display") == "none") {
+                subtitle.css("display", "block");
+            }
+
+            subtitle.html("Ficamos felizes com o seu interesse! Toda nova atualização, lembraremos de enviar à você!");
+
         } else {
-            alert("Ocorreu algum erro inesperado!");
+            errorMessage("Ocorreu um erro inesperado, tente novamente mais tarde.");
         }
     }
 
     function onError(_) {
-        alert("Ocorreu algum erro inesperado!");
+        errorMessage("Ocorreu um erro inesperado, tente novamente mais tarde.");
     }
 
     $.ajax({
