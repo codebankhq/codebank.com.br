@@ -4,17 +4,33 @@ class FormControl {
     constructor(selector) {
         this.form = $(selector);
 
-        this.name = $(this.form[0][0]);
-        this.email = $(this.form[0][1]);
-        this.phone = $(this.form[0][2]);
+        this.inputs = {
+            "name": {
+                input: $(this.form[0][0]),
+                border: $($(".border--input")[0]),
+                errorMessage: "Informe o seu nome.",
+            },
+
+            "email": {
+                input: $(this.form[0][1]),
+                border: $($(".border--input")[1]),
+                errorMessage: "informe o seu email.",
+            },
+
+            "cellphone": {
+                input: $(this.form[0][2]),
+                border: $($(".border--input")[2]),
+                errorMessage: "Informe um número válido.",
+            }
+        };
     }
 
     submit() {
         if (this.validate()) {
             const body = {
-                "name": this.name.val(),
-                "email": this.email.val(),
-                "phone": this.phone.val(),
+                "name": this.inputs['name'].input.val(),
+                "email": this.inputs['email'].input.val(),
+                "phone": this.inputs['cellphone'].input.val(),
             }
 
             $.ajax({
@@ -28,29 +44,19 @@ class FormControl {
     }
 
     validate() {
-        let valid = true;
-        const borders = $(".border--input");
+        var valid = true;
+        const inputNames = Object.keys(this.inputs);
 
-        if (this.isEmpty(this.name.val())) {
-            this.inputError(borders[0], this.name);
-            this.errorMessage("Informe o seu nome.");
-            this.name.error = true;
-            valid = false;
-        }
+        inputNames.forEach((inputName) => {
+            if ((inputName != 'cellphone' && this.isEmpty(this.inputs[inputName].input.val())) ||
+                (inputName == 'cellphone' && this.inputs['cellphone'].input.val() && phoneParse(this.inputs['cellphone'].input.val()) == null)) {
 
-        if (this.isEmpty(this.email.val())) {
-            this.inputError(borders[1], this.email);
-            this.errorMessage("Informe o seu email.");
-            this.email.error = true;
-            valid = false;
-        }
-
-        if (this.phone.val() && phoneParse(this.phone.val()) == null) {
-            this.inputError(borders[2], this.phone);
-            this.errorMessage("Informe um número válido.");
-            this.phone.error = true;
-            valid = false;
-        }
+                this.inputError(this.inputs[inputName]);
+                this.errorMessage(this.inputs[inputName].errorMessage);
+                this.inputs[inputName].error = true;
+                valid = false;
+            }
+        });
 
         return valid;
     }
@@ -60,15 +66,22 @@ class FormControl {
         return string == "" || regex.test(string);
     }
 
-    inputError(border, input) {
-        $(border).css("border", "1px solid #E04646");
-        input.css("border", "1px solid #E04646");
+    inputError(element) {
+        element.border.css("border", "1px solid #E04646");
+        element.input.css("border", "1px solid #E04646");
     }
 
     errorMessage(msg) {
         let message = $(".register__message");
         message.css("display", "block");
         message.html(msg);
+    }
+
+    reset(element) {
+        this.inputs[element.name].border.css("border", "1px solid white");
+        $(element).css("border", "1px solid white");
+        $(".register__message").css("display", "none");
+        this.inputs[element.name].error = false;
     }
 
     onError(_) {
@@ -100,4 +113,10 @@ const formControl = new FormControl("form");
 $("form").on("submit", function (event) {
     event.preventDefault();
     formControl.submit();
+});
+
+$("input").on("focus", function () {
+    if (formControl.inputs[this.name].error) {
+        formControl.reset(this);
+    }
 });
