@@ -23,9 +23,13 @@ class FormControl {
                 errorMessage: "Informe um número válido.",
             }
         };
+
+        this.form.on('submit', (e) => this.submit(e));
     }
 
-    submit() {
+    submit(event) {
+        event.preventDefault();
+
         if (this.validate()) {
             const body = {
                 "name": this.inputs['name'].input.val(),
@@ -109,11 +113,6 @@ class FormControl {
 }
 
 const formControl = new FormControl("form");
-
-$("form").on("submit", function (event) {
-    event.preventDefault();
-    formControl.submit();
-});
 
 $("input").on("focus", function () {
     if (formControl.inputs[this.name].error) {
