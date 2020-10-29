@@ -14,7 +14,7 @@ class FormControl {
             "email": {
                 input: $(this.form[0][1]),
                 border: $($(".border--input")[1]),
-                errorMessage: "informe o seu email.",
+                errorMessage: "Informe o seu email.",
             },
 
             "cellphone": {
