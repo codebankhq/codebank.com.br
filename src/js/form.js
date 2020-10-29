@@ -25,6 +25,7 @@ class FormControl {
         };
 
         this.form.on('submit', (e) => this.submit(e));
+        $("input").on('change', (e) => this.onChange(e));
     }
 
     submit(event) {
@@ -45,6 +46,13 @@ class FormControl {
                 error: this.onError.bind(this)
             });
         };
+    }
+
+    onChange(event) {
+        const name = event.target.name;
+        if (this.inputs[name].error && this.inputs[name].input.val().length > 0) {
+            this.reset(this.inputs[name]);
+        }
     }
 
     validate() {
@@ -82,10 +90,10 @@ class FormControl {
     }
 
     reset(element) {
-        this.inputs[element.name].border.css("border", "1px solid white");
-        $(element).css("border", "1px solid white");
+        element.border.css("border", "1px solid white");
+        element.input.css("border", "1px solid white");
         $(".register__message").css("display", "none");
-        this.inputs[element.name].error = false;
+        element.error = false;
     }
 
     onError(_) {
@@ -112,10 +120,4 @@ class FormControl {
     }
 }
 
-const formControl = new FormControl("form");
-
-$("input").on("focus", function () {
-    if (formControl.inputs[this.name].error) {
-        formControl.reset(this);
-    }
-});
+new FormControl("form");
