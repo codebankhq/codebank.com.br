@@ -237,7 +237,7 @@
           <div class="api__code">
             <pre>
                   <div class="border border--gray border--api__code">
-                    <code class="javascript">// Faz o require da lib do Codebank e inicia com uma chave de teste
+                    <code class="javascript ted_code">// Faz o require da lib do Codebank e inicia com uma chave de teste
                       const API_KEY = 'test_ghvbityg9086tftuhkgvtr8r7ityghuf';
                       const cb = require('@codebank/ted')(API_KEY);
 
@@ -258,20 +258,42 @@
 
 
                     </code>
+
+                    <code class="javascript billet_code">// Faz o require da lib do Codebank e inicia com uma chave de teste
+                      const API_KEY = 'test_ghvbityg9086tftuhkgvtr8r7ityghuf';
+                      const cb = require('@codebank/billet')(API_KEY);
+
+                      // Realiza o pagamento do boleto
+                      const pay = await cb({
+                        code: "13691402750500290410887318880015982870000012000",
+                        amount: 250 * 100, // centavos
+                        description: "Manutenção do carro",
+                      });
+
+
+
+
+
+
+
+
+
+
+                    </code>
                   </div>
                 </pre>
           </div>
         </div>
 
         <div class="api__transactions">
-          <div class="api__transactions__item api__transactions__item--selected">
+          <div class="api__transactions__item api__transactions__item--selected" id="ted">
             <span class="api__transactions__item__trace"></span>
             <h1 class="title marked">
               TED
             </h1>
           </div>
 
-          <div class="api__transactions__item api__transactions__item--notselected">
+          <div class="api__transactions__item api__transactions__item--notselected" id="billet">
             <span class="api__transactions__item__trace"></span>
             <h1 class="title">
               Boleto
