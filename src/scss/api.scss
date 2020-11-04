@@ -50,6 +50,19 @@
         right: 5px;
         bottom: 25px;
     }
+
+    .billet_code {
+        display: none;
+        bottom: 39px;
+    }
+}
+
+@media (min-width: $medium-mobile) {
+    .api__code {
+        .billet_code {
+            bottom: 41px;
+        }
+    }
 }
 
 @media (min-width: $tablet) {
@@ -64,6 +77,10 @@
             position: relative;
             right: 5px;
             bottom: 45px;
+        }
+
+        .billet_code {
+            bottom: 79px;
         }
     }
 
@@ -116,6 +133,10 @@
             right: 10px;
             bottom: 35px;
         }
+
+        .billet_code {
+            bottom: 57px;
+        }
     }
 
     .container--api__code {
@@ -147,5 +168,10 @@
         code {
             bottom: 40px;
         }
+
+        .billet_code {
+            bottom: 68px;
+        }
     }
+
 }
